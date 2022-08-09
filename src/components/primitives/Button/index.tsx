@@ -1,3 +1,1 @@
-import { Button } from "native-base";
-
-export { Button };
+export { Button } from "native-base";
