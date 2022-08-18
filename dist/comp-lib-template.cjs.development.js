@@ -1,8 +1,10 @@
-import { extendTheme, NativeBaseProvider as NativeBaseProvider$1 } from 'native-base';
-export { Box, Button } from 'native-base';
-import React from 'react';
+'use strict';
 
-var myTheme = /*#__PURE__*/extendTheme({
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var nativeBase = require('native-base');
+
+var myTheme = /*#__PURE__*/nativeBase.extendTheme({
   colors: {
     newColor: {
       "50": "#2878ff",
@@ -105,49 +107,23 @@ var ButtonArgs = {
   }
 };
 
-function _extends() {
-  _extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-  return _extends.apply(this, arguments);
-}
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
+Object.defineProperty(exports, 'Box', {
+  enumerable: true,
+  get: function () {
+    return nativeBase.Box;
   }
-
-  return target;
-}
-
-var _excluded = ["children", "theme"];
-var NativeBaseProvider = function NativeBaseProvider(_ref) {
-  var children = _ref.children,
-      theme = _ref.theme,
-      props = _objectWithoutPropertiesLoose(_ref, _excluded);
-
-  console.log(props, "TEST", children, theme, myTheme);
-  return /*#__PURE__*/React.createElement(NativeBaseProvider$1, _extends({
-    theme: myTheme
-  }, props), children);
-}; // export { NativeBaseProvider };
-
-export { ButtonArgs, NativeBaseProvider };
-//# sourceMappingURL=comp-lib.esm.js.map
+});
+Object.defineProperty(exports, 'Button', {
+  enumerable: true,
+  get: function () {
+    return nativeBase.Button;
+  }
+});
+Object.defineProperty(exports, 'NativeBaseProvider', {
+  enumerable: true,
+  get: function () {
+    return nativeBase.NativeBaseProvider;
+  }
+});
+exports.ButtonArgs = ButtonArgs;
+//# sourceMappingURL=comp-lib-template.cjs.development.js.map
