@@ -2,7 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
+
 var nativeBase = require('native-base');
+var React = _interopDefault(require('react'));
 
 var myTheme = /*#__PURE__*/nativeBase.extendTheme({
   colors: {
@@ -107,6 +110,32 @@ var ButtonArgs = {
   }
 };
 
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+var _excluded = ["children", "theme"];
+var NativeBaseProvider = function NativeBaseProvider(_ref) {
+  var children = _ref.children,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+
+  console.log(props, "TEST");
+  return /*#__PURE__*/React.createElement(nativeBase.NativeBaseProvider, Object.assign({
+    theme: myTheme
+  }, props), children);
+}; // export { NativeBaseProvider } from "native-base";
+
 Object.defineProperty(exports, 'Box', {
   enumerable: true,
   get: function () {
@@ -119,11 +148,18 @@ Object.defineProperty(exports, 'Button', {
     return nativeBase.Button;
   }
 });
-Object.defineProperty(exports, 'NativeBaseProvider', {
+Object.defineProperty(exports, 'Heading', {
   enumerable: true,
   get: function () {
-    return nativeBase.NativeBaseProvider;
+    return nativeBase.Heading;
+  }
+});
+Object.defineProperty(exports, 'Text', {
+  enumerable: true,
+  get: function () {
+    return nativeBase.Text;
   }
 });
 exports.ButtonArgs = ButtonArgs;
+exports.NativeBaseProvider = NativeBaseProvider;
 //# sourceMappingURL=comp-lib-template.cjs.development.js.map

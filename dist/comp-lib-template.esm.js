@@ -1,5 +1,6 @@
-import { extendTheme } from 'native-base';
-export { Box, Button, NativeBaseProvider } from 'native-base';
+import { extendTheme, NativeBaseProvider as NativeBaseProvider$1 } from 'native-base';
+export { Box, Button, Heading, Text } from 'native-base';
+import React from 'react';
 
 var myTheme = /*#__PURE__*/extendTheme({
   colors: {
@@ -104,5 +105,31 @@ var ButtonArgs = {
   }
 };
 
-export { ButtonArgs };
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+var _excluded = ["children", "theme"];
+var NativeBaseProvider = function NativeBaseProvider(_ref) {
+  var children = _ref.children,
+      props = _objectWithoutPropertiesLoose(_ref, _excluded);
+
+  console.log(props, "TEST");
+  return /*#__PURE__*/React.createElement(NativeBaseProvider$1, Object.assign({
+    theme: myTheme
+  }, props), children);
+}; // export { NativeBaseProvider } from "native-base";
+
+export { ButtonArgs, NativeBaseProvider };
 //# sourceMappingURL=comp-lib-template.esm.js.map
