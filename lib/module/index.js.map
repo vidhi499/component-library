@@ -1,0 +1,1 @@
+{"version":3,"names":[],"sources":["index.tsx"],"sourcesContent":["import {\n  Button,\n  Box,\n  ButtonArgs,\n  Text,\n  Heading,\n} from \"./components/primitives\";\nimport { NativeBaseProvider } from \"./components/core/NativebaseProvider\";\nexport { Button, Box, NativeBaseProvider, ButtonArgs, Text, Heading };\n"],"mappings":"+sBAAA,mDAOA"}

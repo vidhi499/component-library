@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  ITheme,
-  NativeBaseProvider as NBProvider,
-  NativeBaseProviderProps,
-} from "native-base";
+import { NativeBaseProvider as NBProvider } from "native-base";
 import { myTheme } from "../../theme";
 
 export const NativeBaseProvider = ({ children, theme, ...props }: any) => {
