@@ -1,7 +1,12 @@
 {
   "name": "comp-lib-template",
-  "version": "0.1.8",
-  "main": "dist/index.js",
+  "version": "0.1.11",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "typings": "lib/typescript/index.d.ts",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -21,7 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsdx build --target web",
+    "build:bob": "bob build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -55,7 +60,27 @@
       "last 1 safari version"
     ]
   },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs",
+        {
+          "configFile": true
+        }
+      ],
+      [
+        "module",
+        {
+          "configFile": true
+        }
+      ],
+      "typescript"
+    ]
+  },
   "devDependencies": {
+    "@react-native-community/bob": "^0.17.1",
     "@storybook/addon-actions": "^6.5.10",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-interactions": "^6.5.10",
@@ -67,6 +92,7 @@
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "metro-react-native-babel-preset": "^0.72.1",
     "prop-types": "^15.8.1",
     "webpack": "^5.74.0"
   }
