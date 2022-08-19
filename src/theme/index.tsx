@@ -30,13 +30,13 @@ export const myTheme = extendTheme({
   components: {
     Button: {
       variants: {
-        solid: ({ colorScheme }: any) => {
+        solid: () => {
           return {
             bg: `pink.500`,
             rounded: "full",
           };
         },
-        rounded: ({ colorScheme }: any) => {
+        rounded: () => {
           return {
             bg: `pink.500`,
             rounded: "full",
