@@ -2156,21 +2156,36 @@ export declare const myTheme: {
             };
             sizes: {
                 '4xl': {
-                    fontSize: (string | null)[];
+                    fontSize: {
+                        base: string;
+                        md: string;
+                    };
                     letterSpacing: string;
                 };
                 '3xl': {
-                    fontSize: (string | null)[];
+                    fontSize: {
+                        base: string;
+                        md: string;
+                    };
                     letterSpacing: string;
                 };
                 '2xl': {
-                    fontSize: (string | null)[];
+                    fontSize: {
+                        base: string;
+                        md: string;
+                    };
                 };
                 xl: {
-                    fontSize: (string | null)[];
+                    fontSize: {
+                        base: string;
+                        md: string;
+                    };
                 };
                 lg: {
-                    fontSize: (string | null)[];
+                    fontSize: {
+                        base: string;
+                        md: string;
+                    };
                 };
                 md: {
                     fontSize: string;

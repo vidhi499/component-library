@@ -44,4 +44,45 @@ export declare const ButtonArgs: {
             type: string;
         };
     };
+    isDisabled: {
+        name: string;
+        type: {
+            name: string;
+        };
+        defaultValue: boolean;
+        control: {
+            type: string;
+        };
+    };
+    isLoading: {
+        name: string;
+        type: {
+            name: string;
+        };
+        defaultValue: boolean;
+        control: {
+            type: string;
+        };
+    };
+    isPressed: {
+        name: string;
+        type: {
+            name: string;
+        };
+        defaultValue: boolean;
+        control: {
+            type: string;
+        };
+    };
+    sizes: {
+        name: string;
+        type: {
+            name: string;
+        };
+        defaultValue: string;
+        control: {
+            type: string;
+        };
+        options: string[];
+    };
 };

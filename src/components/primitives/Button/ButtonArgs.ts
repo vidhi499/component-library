@@ -39,4 +39,48 @@ export const ButtonArgs = {
       type: "boolean",
     },
   },
+  isDisabled: {
+    name: "isDisabled",
+    type: {
+      name: "boolean",
+    },
+    defaultValue: false,
+
+    control: {
+      type: "boolean",
+    },
+  },
+  isLoading: {
+    name: "isLoading",
+    type: {
+      name: "boolean",
+    },
+    defaultValue: false,
+
+    control: {
+      type: "boolean",
+    },
+  },
+  isPressed: {
+    name: "isPressed",
+    type: {
+      name: "boolean",
+    },
+    defaultValue: false,
+
+    control: {
+      type: "boolean",
+    },
+  },
+  sizes: {
+    name: "size",
+    type: {
+      name: "string",
+    },
+    defaultValue: "md",
+    control: {
+      type: "select",
+    },
+    options: ["sm", "md", "lg"],
+  },
 };
