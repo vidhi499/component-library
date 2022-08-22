@@ -51,18 +51,29 @@ export declare const myTheme: {
     components: {
         Progress: {
             baseStyle: (props: Record<string, any>) => {
-                bg: string;
                 overflow: string;
                 _filledTrack: {
-                    bg: any;
                     shadow: number;
                     height: string;
                     display: string;
                     alignItems: string;
                     justifyContent: string;
+                    rounded: string;
                     _text: {
                         color: string;
                         fontWeight: string;
+                    };
+                };
+                _light: {
+                    bg: string;
+                    _filledTrack: {
+                        bg: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    _filledTrack: {
+                        bg: string;
                     };
                 };
             };
@@ -100,56 +111,111 @@ export declare const myTheme: {
             baseStyle: (props: Record<string, any>) => {
                 borderWidth: number;
                 borderRadius: string;
-                p: string;
-                borderColor: any;
-                bg: any;
-                _text: {
-                    ml: number;
-                };
-                _interactionBox: {
-                    position: string;
-                    zIndex: number;
-                    borderRadius: string;
-                };
-                _icon: {
-                    color: any;
-                };
-                _hover: {
-                    _interactionBox: {
-                        bg: string;
+                p: number;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _checked: {
+                        borderColor: string;
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            borderColor: string;
+                            _icon: {
+                                color: string;
+                            };
+                            _disabled: {
+                                borderColor: string;
+                                _icon: {
+                                    color: string;
+                                };
+                            };
+                        };
+                        _pressed: {
+                            borderColor: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                    };
+                    _hover: {
+                        borderColor: string;
+                        _disabled: {
+                            borderColor: string;
+                        };
+                    };
+                    _pressed: {
+                        borderColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
                     };
                 };
-                _focus: {
-                    _interactionBox: {
-                        bg: string;
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _checked: {
+                        borderColor: string;
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            borderColor: string;
+                            _icon: {
+                                color: string;
+                            };
+                            _disabled: {
+                                borderColor: string;
+                                _icon: {
+                                    color: string;
+                                };
+                            };
+                        };
+                        _pressed: {
+                            borderColor: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                    };
+                    _hover: {
+                        borderColor: string;
+                        _disabled: {
+                            borderColor: string;
+                        };
+                    };
+                    _pressed: {
+                        borderColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
                     };
                 };
-                _focusVisible: {
-                    _interactionBox: {
-                        bg: string;
+                _stack: {
+                    direction: string;
+                    alignItems: string;
+                    space: number;
+                    _web: {
+                        cursor: string;
                     };
-                };
-                _checked: {
-                    _interactionBox: {
-                        borderColor: any;
-                    };
-                    borderColor: any;
                 };
                 _disabled: {
-                    opacity: number;
-                    _interactionBox: {
-                        bg: string;
-                    };
+                    opacity: string;
                     _icon: {
                         bg: string;
                     };
+                    _stack: {
+                        opacity: string;
+                    };
                 };
-                _invalid: {
-                    borderColor: any;
-                };
-                _pressed: {
-                    _interactionBox: {
-                        bg: string;
+                _focusVisible: {
+                    _web: {
+                        style: {
+                            outlineWidth: string;
+                            outlineColor: any;
+                            outlineStyle: string;
+                        };
                     };
                 };
             };
@@ -185,32 +251,96 @@ export declare const myTheme: {
                 colorScheme: string;
             };
         };
+        RadioGroup: {
+            baseStyle: () => {
+                alignItems: string;
+            };
+        };
         ScaleFade: {
-            defaultProps: {
-                duration: number;
-                initialScale: number;
+            baseStyle: {
+                initial: {
+                    opacity: number;
+                    scale: number;
+                };
+                animate: {
+                    opacity: number;
+                    scale: number;
+                    transition: number;
+                };
+                exit: {
+                    opacity: number;
+                    scale: number;
+                    transition: number;
+                };
             };
         };
         Select: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
+                selection: {
+                    start: number;
+                };
+                _light: {
+                    customDropdownIconProps: {
+                        color: string;
+                        mr: string;
+                    };
+                    _hover: {
+                        borderColor: string;
+                    };
+                    _focus: {
+                        borderColor: string;
+                    };
+                    _disabled: {
+                        bg: string;
+                        placeholderTextColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
+                    };
+                };
+                _dark: {
+                    customDropdownIconProps: {
+                        color: string;
+                        mr: string;
+                    };
+                    _hover: {
+                        borderColor: string;
+                    };
+                    _focus: {
+                        borderColor: string;
+                    };
+                    _disabled: {
+                        bg: string;
+                        placeholderTextColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
+                    };
+                };
                 customDropdownIconProps: {
                     size: string;
                     p: string;
-                    pl: string;
-                    color: string;
+                };
+                _webSelect: {
+                    style: {
+                        appearance: string;
+                        WebkitAppearance: string;
+                        MozAppearance: string;
+                        position: string;
+                        width: string;
+                        height: string;
+                        opacity: number;
+                        zIndex: number;
+                    };
+                };
+                _web: {
+                    pointerEvents: string;
                 };
                 _disabled: {
                     opacity: string;
-                    bg: any;
                 };
-                _invalid: {
-                    borderColor: any;
-                };
-                _focus: {
-                    borderColor: any;
-                };
-                _hover: {
-                    bg: any;
+                _actionSheetBody: {
+                    w: string;
                 };
                 _actionSheetContent: {};
             };
@@ -234,6 +364,7 @@ export declare const myTheme: {
             baseStyle: (props: Record<string, any>) => {
                 startColor: any;
                 endColor: string;
+                overflow: string;
                 fadeDuration: number;
                 speed: number;
                 h: string;
@@ -247,6 +378,7 @@ export declare const myTheme: {
                 fadeDuration: number;
                 w: string;
                 speed: number;
+                flexDirection: string;
                 _line: {
                     h: number;
                     rounded: string;
@@ -258,51 +390,190 @@ export declare const myTheme: {
             };
         };
         SliderFilledTrack: {
-            baseStyle: (props: any) => {
-                bg: any;
+            baseStyle: ({ orientation, isReversed, sliderTrackPosition, size, colorScheme, }: any) => {
+                left: number | undefined;
+                bottom: number | undefined;
+                right: number | undefined;
+                top: number | undefined;
+                style: {
+                    height: any;
+                    width: any;
+                };
+                _light: {
+                    bg: string;
+                };
+                _dark: {
+                    bg: string;
+                };
+            };
+            defaultProps: {
+                colorScheme: string;
             };
         };
         SliderThumb: {
             baseStyle: (props: any) => {
-                borderRadius: number;
+                borderRadius: string;
                 zIndex: number;
                 alignItems: string;
                 justifyContent: string;
-                bg: any;
                 scaleOnPressed: number;
+                _interactionBox: {
+                    position: string;
+                    borderRadius: string;
+                    zIndex: number;
+                };
+                _stack: {
+                    direction: string;
+                    alignItems: string;
+                    justifyContent: string;
+                    space: number;
+                };
+                _light: {
+                    bg: string;
+                    _hover: {
+                        _web: {
+                            outlineWidth: string;
+                            outlineColor: any;
+                            outlineStyle: string;
+                        };
+                    };
+                    _focus: {
+                        _web: {
+                            outlineWidth: string;
+                            outlineColor: any;
+                            outlineStyle: string;
+                        };
+                    };
+                    _pressed: {
+                        _interactionBox: {
+                            borderWidth: string;
+                            borderColor: string;
+                        };
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    _hover: {
+                        _web: {
+                            outlineWidth: string;
+                            outlineColor: any;
+                            outlineStyle: string;
+                        };
+                    };
+                    _focus: {
+                        _web: {
+                            outlineWidth: string;
+                            outlineColor: any;
+                            outlineStyle: string;
+                        };
+                    };
+                    _pressed: {
+                        _interactionBox: {
+                            borderWidth: string;
+                            borderColor: string;
+                        };
+                    };
+                };
+                _web: {
+                    cursor: string;
+                };
+            };
+            defaultProps: {
+                colorScheme: string;
+            };
+            sizes: {
+                lg: {
+                    _interactionBox: string;
+                };
+                md: {
+                    _interactionBox: string;
+                };
+                sm: {
+                    _interactionBox: string;
+                };
             };
         };
         SliderTrack: {
-            baseStyle: (props: any) => {
-                bg: string;
+            baseStyle: ({ isVertical, size }: any) => {
                 borderRadius: string;
                 overflow: string;
+                style: {
+                    height: any;
+                    width: any;
+                };
+                _pressable: {
+                    alignItems: string;
+                    justifyContent: string;
+                    height: any;
+                    width: any;
+                    py: string | undefined;
+                    px: string | undefined;
+                };
+                _light: {
+                    bg: string;
+                };
+                _dark: {
+                    bg: string;
+                };
             };
         };
         Slider: {
+            baseStyle: (props: any) => {
+                alignItems: string;
+                justifyContent: string;
+                height: string | undefined;
+                width: string | undefined;
+                _disabled: {
+                    opacity: number;
+                    _web: {
+                        cursor: string;
+                    };
+                };
+            };
             defaultProps: {
                 size: string;
             };
             sizes: {
                 lg: {
                     thumbSize: number;
-                    sliderSize: number;
+                    sliderTrackHeight: number;
+                    _interactionBox: {
+                        p: string;
+                    };
                 };
                 md: {
                     thumbSize: number;
-                    sliderSize: number;
+                    sliderTrackHeight: number;
+                    _interactionBox: {
+                        p: string;
+                    };
                 };
                 sm: {
                     thumbSize: number;
-                    sliderSize: number;
+                    sliderTrackHeight: number;
+                    _interactionBox: {
+                        p: string;
+                    };
                 };
             };
         };
         Slide: {
+            baseStyle: {
+                h: string;
+                pointerEvents: string;
+                _overlay: {
+                    style: {
+                        overflow: string;
+                    };
+                };
+            };
             defaultProps: {
                 duration: number;
                 placement: string;
                 overlay: boolean;
+                _overlay: {
+                    isOpen: boolean;
+                };
             };
         };
         SlideFade: {
@@ -322,6 +593,38 @@ export declare const myTheme: {
             };
             defaultProps: {
                 size: string;
+            };
+        };
+        Square: {
+            baseStyle: {
+                alignItems: string;
+                justifyContent: string;
+            };
+            sizes: {
+                xs: {
+                    height: number;
+                    width: number;
+                };
+                sm: {
+                    height: number;
+                    width: number;
+                };
+                md: {
+                    height: number;
+                    width: number;
+                };
+                lg: {
+                    height: number;
+                    width: number;
+                };
+                xl: {
+                    height: number;
+                    width: number;
+                };
+                '2xl': {
+                    height: number;
+                    width: number;
+                };
             };
         };
         Stack: {
@@ -371,12 +674,31 @@ export declare const myTheme: {
                 _invalid: {
                     borderWidth: number;
                     borderRadius: number;
-                    borderColor: string;
                 };
-                offTrackColor: any;
-                onTrackColor: any;
-                onThumbColor: any;
-                offThumbColor: any;
+                onThumbColor: string;
+                offThumbColor: string;
+                _light: {
+                    offTrackColor: string;
+                    onTrackColor: string;
+                    _hover: {
+                        offTrackColor: string;
+                        onTrackColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
+                    };
+                };
+                _dark: {
+                    offTrackColor: string;
+                    onTrackColor: string;
+                    _hover: {
+                        offTrackColor: string;
+                        onTrackColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
+                    };
+                };
             };
             sizes: {
                 sm: {
@@ -565,32 +887,9 @@ export declare const myTheme: {
         };
         Tag: {
             variants: {
-                solid: (props: Record<string, any>) => {
-                    bg: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderWidth: string;
-                    borderColor: string;
-                    borderRadius: string;
-                };
-                subtle: (props: Record<string, any>) => {
-                    bg: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderWidth: string;
-                    borderRadius: string;
-                    borderColor: string;
-                };
-                outline: (props: Record<string, any>) => {
-                    borderColor: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderRadius: string;
-                    borderWidth: string;
-                };
+                solid: any;
+                subtle: any;
+                outline: any;
             };
             baseStyle: {
                 _text: {
@@ -637,8 +936,13 @@ export declare const myTheme: {
             };
         };
         Text: {
-            baseStyle: (props: Record<string, any>) => {
-                color: any;
+            baseStyle: () => {
+                _light: {
+                    color: string;
+                };
+                _dark: {
+                    color: string;
+                };
                 fontWeight: string;
                 fontFamily: string;
                 fontStyle: string;
@@ -661,9 +965,12 @@ export declare const myTheme: {
             baseStyle: {
                 multiline: boolean;
                 p: string;
-                totalLines: number;
-                h: number | undefined;
                 textAlignVertical: string;
+                h: string;
+            };
+            defaultProps: {
+                size: string;
+                variant: string;
             };
         };
         TextField: {
@@ -691,16 +998,42 @@ export declare const myTheme: {
                 p: string;
                 rounded: string;
                 shadow: number;
+                _stack: {
+                    margin: string;
+                    position: string;
+                    space: number;
+                    alignItems: string;
+                    justifyContent: string;
+                    pointerEvents: string;
+                    _web: {
+                        position: string;
+                    };
+                };
+                _overlay: {};
+                _presenceTransition: {
+                    animate: {
+                        opacity: number;
+                        transition: {
+                            easing: any;
+                            duration: number;
+                        };
+                    };
+                    exit: {
+                        opacity: number;
+                        scale: number;
+                        transition: {
+                            easing: any;
+                            duration: number;
+                        };
+                    };
+                };
                 _title: {
-                    color: any;
+                    color: string;
                     fontWeight: number;
                 };
                 _description: {
-                    color: any;
+                    color: string;
                     fontWeight: number;
-                };
-                _closeIcon: {
-                    size: number;
                 };
             };
             defaultProps: {};
@@ -726,47 +1059,99 @@ export declare const myTheme: {
             defaultProps: {};
         };
         Tooltip: {
-            baseStyle: (props: any) => {
-                bg: any;
+            baseStyle: () => {
                 py: number;
                 px: number;
-                rounded: string;
                 shadow: number;
+                rounded: string;
                 _text: {
-                    color: any;
                     fontSize: string;
+                };
+                _light: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         PopoverCloseButton: {
-            baseStyle: (props: any) => {
+            baseStyle: () => {
                 position: string;
                 right: number;
                 top: number;
                 zIndex: number;
-                colorScheme: string;
-                p: number;
+                p: string;
+                bg: string;
+                borderRadius: string;
+                _web: {
+                    outlineWidth: number;
+                    cursor: string;
+                };
                 _icon: {
-                    size: number;
-                    color: any;
+                    size: string;
+                };
+                _light: {
+                    _icon: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                };
+                _dark: {
+                    _icon: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
                 };
             };
         };
         PopoverBody: {
-            baseStyle: (props: any) => {
-                pt: string;
+            baseStyle: () => {
                 p: string;
-                _text: {
-                    color: any;
+                shadow: string;
+                _light: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         PopoverContent: {
-            baseStyle: (props: any) => {
-                backgroundColor: any;
-                borderColor: any;
-                _text: {
-                    color: any;
+            baseStyle: () => {
+                _light: {
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
                 };
                 borderWidth: number;
                 rounded: string;
@@ -774,31 +1159,61 @@ export declare const myTheme: {
             };
         };
         PopoverHeader: {
-            baseStyle: (props: any) => {
-                py: string;
-                px: string;
+            baseStyle: () => {
+                _web: {
+                    accessibilityRole: string;
+                };
+                p: string;
                 borderBottomWidth: string;
-                borderColor: any;
                 _text: {
                     fontSize: string;
                     fontWeight: string;
-                    color: any;
                     lineHeight: string;
+                };
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         PopoverArrow: {
-            baseStyle: (props: any) => {
-                borderColor: any;
+            baseStyle: () => {
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                };
             };
         };
         PopoverFooter: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 p: string;
-                bg: any;
+                shadow: string;
                 flexDirection: string;
                 justifyContent: string;
                 flexWrap: string;
+                borderTopWidth: number;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                };
             };
         };
         FlatList: {
@@ -858,42 +1273,110 @@ export declare const myTheme: {
         Actionsheet: {
             defaultProps: {
                 size: string;
+                justifyContent: string;
+                animationPreset: string;
             };
         };
         ActionsheetContent: {
-            baseStyle: (props: any) => {
+            baseStyle: () => {
                 alignItems: string;
                 px: number;
                 py: number;
                 borderRadius: string;
                 roundedTop: number;
+                _light: {
+                    _dragIndicator: {
+                        bg: string;
+                    };
+                };
+                _dark: {
+                    _dragIndicator: {
+                        bg: string;
+                    };
+                };
                 _dragIndicator: {
-                    bg: any;
                     height: number;
                     width: number;
                     borderRadius: number;
                 };
+                _dragIndicatorWrapper: {
+                    pt: number;
+                    pb: number;
+                    mt: number;
+                    width: string;
+                    alignItems: string;
+                    collapsable: boolean;
+                };
+                _dragIndicatorWrapperOffSet: {
+                    py: number;
+                    collapsable: boolean;
+                };
             };
         };
         ActionsheetItem: {
-            baseStyle: (props: any) => {
+            baseStyle: () => {
                 width: string;
                 justifyContent: string;
+                _stack: {
+                    space: number;
+                };
                 p: number;
                 _text: {
-                    fontSize: number;
+                    fontSize: string;
                     fontWeight: string;
-                    color: any;
                 };
-                _pressed: {
-                    bg: any;
+                _disabled: {
+                    opacity: number;
                 };
-                _hover: {
-                    bg: any;
+                _light: {
+                    bg: string;
+                    _icon: {
+                        color: string;
+                    };
+                    _text: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                    _focusVisible: {
+                        _web: {
+                            outlineWidth: string;
+                            style: {
+                                boxShadow: string;
+                            };
+                            bg: string;
+                        };
+                        bg: string;
+                    };
                 };
-            };
-            defaultProps: {
-                variant: string;
+                _dark: {
+                    bg: string;
+                    _icon: {
+                        color: string;
+                    };
+                    _text: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                    _focusVisible: {
+                        _web: {
+                            outlineWidth: string;
+                            style: {
+                                boxShadow: string;
+                            };
+                            bg: string;
+                        };
+                    };
+                };
             };
         };
         Alert: {
@@ -905,52 +1388,12 @@ export declare const myTheme: {
                 borderRadius: string;
             };
             variants: {
-                subtle: (props: Record<string, any>) => {
-                    bg: any;
-                    _icon: {
-                        color: any;
-                    };
-                };
-                solid: (props: Record<string, any>) => {
-                    borderWidth: number;
-                    borderColor: string;
-                    bg: any;
-                    _icon: {
-                        color: any;
-                    };
-                };
-                'left-accent': (props: Record<string, any>) => {
-                    borderWidth: number;
-                    bg: any;
-                    _icon: {
-                        color: any;
-                    };
-                    borderColor: string;
-                    borderLeftColor: any;
-                };
-                'top-accent': (props: Record<string, any>) => {
-                    borderWidth: number;
-                    borderColor: string;
-                    borderTopColor: any;
-                    bg: any;
-                    _icon: {
-                        color: any;
-                    };
-                };
-                outline: (props: Record<string, any>) => {
-                    borderWidth: number;
-                    borderColor: any;
-                    _icon: {
-                        color: any;
-                    };
-                };
-                'outline-light': (props: Record<string, any>) => {
-                    borderWidth: number;
-                    borderColor: string;
-                    _icon: {
-                        color: any;
-                    };
-                };
+                subtle: any;
+                solid: any;
+                'left-accent': any;
+                'top-accent': any;
+                outline: any;
+                'outline-light': any;
             };
             defaultProps: {
                 colorScheme: string;
@@ -969,15 +1412,34 @@ export declare const myTheme: {
             };
         };
         Avatar: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: (props: import("native-base/lib/typescript/components/composites/Avatar/types").InterfaceAvatarProps & {
+                name: string;
+            }) => {
                 bg: string;
-                borderColor: any;
                 position: string;
                 justifyContent: string;
                 alignItems: string;
                 borderRadius: string;
                 _text: {
                     fontWeight: number;
+                    color: string;
+                };
+                _image: {
+                    borderRadius: string;
+                    alt: string;
+                    _alt: {
+                        fontWeight: number;
+                    };
+                    style: {
+                        height: string;
+                        width: string;
+                    };
+                };
+                _light: {
+                    borderColor: string;
+                };
+                _dark: {
+                    borderColor: string;
                 };
             };
             sizes: {
@@ -987,6 +1449,7 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _badgeSize: any;
                 };
                 sm: {
                     width: any;
@@ -994,6 +1457,7 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _badgeSize: any;
                 };
                 md: {
                     width: any;
@@ -1001,6 +1465,7 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _badgeSize: any;
                 };
                 lg: {
                     width: any;
@@ -1008,6 +1473,7 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _badgeSize: any;
                 };
                 xl: {
                     width: any;
@@ -1015,6 +1481,7 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _badgeSize: any;
                 };
                 '2xl': {
                     width: any;
@@ -1022,6 +1489,7 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _badgeSize: any;
                 };
             };
             defaultProps: {
@@ -1029,23 +1497,60 @@ export declare const myTheme: {
             };
         };
         AvatarBadge: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 borderRadius: string;
                 borderWidth: number;
-                borderColor: any;
-                bg: any;
+                bg: string;
+                size: number;
+                position: string;
+                right: number;
+                bottom: number;
+                _light: {
+                    borderColor: string;
+                };
+                _dark: {
+                    borderColor: string;
+                };
             };
         };
         AvatarGroup: {
-            baseStyle: (props: Record<string, any>) => {
-                borderWidth: number;
-                borderColor: any;
-                bg: any;
+            baseStyle: ({ isVertical }: import("native-base/lib/typescript/components/composites/Avatar/types").IAvatarGroupProps) => {
+                flexDirection: string;
                 space: number;
+                _avatar: {
+                    borderWidth: number;
+                };
+                _hiddenAvatarPlaceholder: {
+                    _text: {
+                        color: string;
+                    };
+                };
+                _light: {
+                    _avatar: {
+                        borderColor: string;
+                    };
+                    _hiddenAvatarPlaceholder: {
+                        bg: string;
+                    };
+                };
+                _dark: {
+                    _avatar: {
+                        borderColor: string;
+                    };
+                    _hiddenAvatarPlaceholder: {
+                        bg: string;
+                    };
+                };
+            };
+            defaultProps: {
+                isVertical: boolean;
             };
         };
         Badge: {
             baseStyle: {
+                flexDirection: string;
+                justifyContent: string;
+                space: number;
                 px: string;
                 py: string;
                 alignItems: string;
@@ -1055,36 +1560,14 @@ export declare const myTheme: {
                 };
             };
             variants: {
-                solid: (props: Record<string, any>) => {
-                    bg: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderWidth: string;
-                    borderColor: string;
-                    borderRadius: string;
-                };
-                subtle: (props: Record<string, any>) => {
-                    bg: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderWidth: string;
-                    borderRadius: string;
-                    borderColor: string;
-                };
-                outline: (props: Record<string, any>) => {
-                    borderColor: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderRadius: string;
-                    borderWidth: string;
-                };
+                solid: any;
+                subtle: any;
+                outline: any;
             };
             defaultProps: {
                 variant: string;
                 colorScheme: string;
+                size: string;
             };
         };
         Box: {
@@ -1134,22 +1617,31 @@ export declare const myTheme: {
             };
         };
         Button: {
-            baseStyle: (props: any) => {
+            baseStyle: (props: import("native-base/lib/typescript/components/primitives/Button/types").InterfaceButtonProps & {
+                theme: any;
+            }) => {
                 borderRadius: string;
                 flexDirection: string;
                 justifyContent: string;
                 alignItems: string;
                 _web: {
+                    _disabled: {
+                        cursor: string;
+                    };
+                    _loading: {
+                        cursor: string;
+                    };
                     cursor: string;
-                };
-                _text: {
-                    fontWeight: string;
+                    userSelect: string;
                 };
                 _focusVisible: {
-                    style: any;
+                    _web: {
+                        outlineWidth: string;
+                        style: any;
+                    };
                 };
                 _stack: {
-                    space: number;
+                    space: string;
                     alignItems: string;
                 };
                 _loading: {
@@ -1164,177 +1656,12 @@ export declare const myTheme: {
                 };
             };
             variants: {
-                ghost: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    _text: {
-                        color: any;
-                    };
-                    bg?: undefined;
-                    _web?: undefined;
-                    _hover?: undefined;
-                    _focusVisible?: undefined;
-                    _pressed?: undefined;
-                    _spinner?: undefined;
-                } | {
-                    _text: {
-                        color: any;
-                    };
-                    bg: string;
-                    _web: {
-                        outlineWidth: string;
-                    };
-                    _hover: {
-                        borderColor: any;
-                        bg: string;
-                    };
-                    _focusVisible: {
-                        borderColor: any;
-                        bg: string;
-                    };
-                    _pressed: {
-                        borderColor: any;
-                        bg: string;
-                    };
-                    _spinner: {
-                        size: string;
-                    };
-                };
-                outline: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    _text: {
-                        color: any;
-                    };
-                    bg?: undefined;
-                    _web?: undefined;
-                    _hover?: undefined;
-                    _focusVisible?: undefined;
-                    _pressed?: undefined;
-                    _spinner?: undefined;
-                    borderWidth: string;
-                    borderColor: any;
-                } | {
-                    _text: {
-                        color: any;
-                    };
-                    bg: string;
-                    _web: {
-                        outlineWidth: string;
-                    };
-                    _hover: {
-                        borderColor: any;
-                        bg: string;
-                    };
-                    _focusVisible: {
-                        borderColor: any;
-                        bg: string;
-                    };
-                    _pressed: {
-                        borderColor: any;
-                        bg: string;
-                    };
-                    _spinner: {
-                        size: string;
-                    };
-                    borderWidth: string;
-                    borderColor: any;
-                };
-                solid: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    _web: {
-                        outlineWidth: string;
-                    };
-                    bg: string;
-                    _hover: {
-                        bg: string;
-                    };
-                    _pressed: {
-                        bg: string;
-                    };
-                    _focus: {
-                        bg: string;
-                    };
-                    _loading: {
-                        bg: any;
-                        opacity: string;
-                    };
-                    _disabled: {
-                        bg: any;
-                    };
-                };
-                subtle: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    _text: {
-                        color: any;
-                    };
-                    _web: {
-                        outlineWidth: string;
-                    };
-                    bg: string;
-                    _hover: {
-                        _text: {
-                            color: any;
-                        };
-                        bg: any;
-                    };
-                    _pressed: {
-                        _text: {
-                            color: any;
-                        };
-                        bg: any;
-                    };
-                };
-                link: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    _text: {
-                        textDecorationLine: string | undefined;
-                        color: any;
-                    };
-                    _hover: {
-                        _text: {
-                            color: any;
-                            textDecorationLine: string;
-                        };
-                    };
-                    _focusVisible: {
-                        _text: {
-                            color: any;
-                            textDecorationLine: string;
-                        };
-                    };
-                    _pressed: {
-                        _text: {
-                            color: any;
-                        };
-                    };
-                    bg?: undefined;
-                    _web?: undefined;
-                    _spinner?: undefined;
-                } | {
-                    _text: {
-                        textDecorationLine: string | undefined;
-                        color: any;
-                    };
-                    _hover: {
-                        _text: {
-                            color: any;
-                            textDecorationLine: string;
-                        };
-                    };
-                    _focusVisible: {
-                        _text: {
-                            color: any;
-                            textDecorationLine: string;
-                        };
-                    };
-                    _pressed: {
-                        _text: {
-                            color: any;
-                        };
-                    };
-                    bg: string;
-                    _web: {
-                        outlineWidth: string;
-                    };
-                    _spinner: {
-                        size: string;
-                    };
-                };
-                unstyled: () => {};
+                ghost: any;
+                outline: any;
+                solid: any;
+                subtle: any;
+                link: any;
+                unstyled: any;
             };
             sizes: {
                 lg: {
@@ -1343,12 +1670,18 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _icon: {
+                        size: string;
+                    };
                 };
                 md: {
                     px: string;
                     py: string;
                     _text: {
                         fontSize: string;
+                    };
+                    _icon: {
+                        size: string;
                     };
                 };
                 sm: {
@@ -1357,12 +1690,18 @@ export declare const myTheme: {
                     _text: {
                         fontSize: string;
                     };
+                    _icon: {
+                        size: string;
+                    };
                 };
                 xs: {
                     px: string;
                     py: string;
                     _text: {
                         fontSize: string;
+                    };
+                    _icon: {
+                        size: string;
                     };
                 };
             };
@@ -1422,57 +1761,148 @@ export declare const myTheme: {
                 };
             };
         };
+        Circle: {
+            baseStyle: {
+                rounded: string;
+                alignItems: string;
+                justifyContent: string;
+            };
+            sizes: {
+                xs: {
+                    height: number;
+                    width: number;
+                };
+                sm: {
+                    height: number;
+                    width: number;
+                };
+                md: {
+                    height: number;
+                    width: number;
+                };
+                lg: {
+                    height: number;
+                    width: number;
+                };
+                xl: {
+                    height: number;
+                    width: number;
+                };
+                '2xl': {
+                    height: number;
+                    width: number;
+                };
+            };
+        };
         Checkbox: {
             baseStyle: (props: Record<string, any>) => {
                 justifyContent: string;
                 flexDirection: string;
                 borderWidth: number;
                 borderRadius: string;
-                borderColor: any;
-                bg: any;
+                opacity: number;
+                p: number;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                    _icon: {
+                        color: string;
+                    };
+                    _checked: {
+                        borderColor: string;
+                        bg: string;
+                        _hover: {
+                            borderColor: string;
+                            bg: string;
+                            _disabled: {
+                                borderColor: string;
+                                bg: string;
+                            };
+                        };
+                        _pressed: {
+                            borderColor: string;
+                            bg: string;
+                        };
+                    };
+                    _hover: {
+                        borderColor: string;
+                        _disabled: {
+                            borderColor: string;
+                        };
+                    };
+                    _pressed: {
+                        borderColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                    _icon: {
+                        color: string;
+                    };
+                    _checked: {
+                        borderColor: string;
+                        bg: string;
+                        _hover: {
+                            borderColor: string;
+                            bg: string;
+                            _disabled: {
+                                borderColor: string;
+                                bg: string;
+                            };
+                        };
+                        _pressed: {
+                            borderColor: string;
+                            bg: string;
+                        };
+                    };
+                    _hover: {
+                        borderColor: string;
+                        _disabled: {
+                            borderColor: string;
+                        };
+                    };
+                    _pressed: {
+                        borderColor: string;
+                    };
+                    _invalid: {
+                        borderColor: string;
+                    };
+                };
+                _stack: {
+                    direction: string;
+                    alignItems: string;
+                    space: number;
+                    _web: {
+                        cursor: string;
+                    };
+                };
                 _text: {
                     ml: number;
-                    color: any;
-                };
-                _interactionBox: {
-                    position: string;
-                    borderRadius: string;
-                };
-                _hover: {
-                    _interactionBox: {
-                        bg: string;
-                    };
-                };
-                _focus: {
-                    _interactionBox: {
-                        bg: string;
-                    };
                 };
                 _focusVisible: {
-                    _interactionBox: {
-                        bg: string;
+                    _web: {
+                        style: {
+                            outlineWidth: string;
+                            outlineColor: any;
+                            outlineStyle: string;
+                        };
                     };
                 };
                 _disabled: {
-                    _interactionBox: {
-                        bg: string;
+                    _web: {
+                        cursor: string;
                     };
                     opacity: number;
-                };
-                _pressed: {
-                    _interactionBox: {
-                        bg: string;
-                    };
-                };
-                _checked: {
-                    borderColor: any;
-                    bg: any;
-                };
-                _invalid: {
-                    borderColor: any;
-                };
-                _icon: {
-                    color: any;
                 };
             };
             sizes: {
@@ -1505,6 +1935,11 @@ export declare const myTheme: {
                 defaultIsChecked: boolean;
                 size: string;
                 colorScheme: string;
+            };
+        };
+        CheckboxGroup: {
+            baseStyle: () => {
+                alignItems: string;
             };
         };
         CircularProgress: {
@@ -1555,48 +1990,35 @@ export declare const myTheme: {
                 py: number;
             };
             variants: {
-                solid: (props: Record<string, any>) => {
-                    bg: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderWidth: string;
-                    borderColor: string;
-                    borderRadius: string;
-                };
-                subtle: (props: Record<string, any>) => {
-                    bg: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderWidth: string;
-                    borderRadius: string;
-                    borderColor: string;
-                };
-                outline: (props: Record<string, any>) => {
-                    borderColor: any;
-                    _text: {
-                        color: any;
-                    };
-                    borderRadius: string;
-                    borderWidth: string;
-                };
+                solid: any;
+                subtle: any;
+                outline: any;
             };
             defaultProps: {
                 variant: string;
                 colorScheme: string;
+                size: string;
             };
         };
         Container: {
-            baseStyle: {
+            baseStyle: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
                 maxWidth: string;
+                alignItems: string;
+                _text: {
+                    textAlign: string;
+                };
             };
         };
         Divider: {
             baseStyle: (props: Record<string, any>) => {
                 width: string;
                 height: string;
-                bg: any;
+                _light: {
+                    bg: string;
+                };
+                _dark: {
+                    bg: string;
+                };
             };
             defaultProps: {
                 orientation: string;
@@ -1604,9 +2026,22 @@ export declare const myTheme: {
             };
         };
         Fade: {
-            defaultProps: {
-                entryDuration: number;
-                exitDuration: number;
+            baseStyle: {
+                initial: {
+                    opacity: number;
+                };
+                animate: {
+                    opacity: number;
+                    transition: {
+                        duration: number;
+                    };
+                };
+                exit: {
+                    opacity: number;
+                    transition: {
+                        duration: number;
+                    };
+                };
             };
         };
         FAB: {
@@ -1626,57 +2061,107 @@ export declare const myTheme: {
             };
         };
         Flex: {
-            defaultProps: {
+            baseStyle: {
+                display: string;
                 flexDirection: string;
             };
         };
-        FormControl: {};
+        Spacer: {
+            baseStyle: {
+                flexGrow: number;
+            };
+        };
+        FormControl: {
+            baseStyle: {
+                width: string;
+            };
+        };
         FormControlLabel: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
+                flexDirection: string;
+                justifyContent: string;
                 _text: {
                     fontSize: string;
                     fontWeight: string;
                 };
-                astrickColor: any;
-                mb: string;
-                mr: string;
+                my: string;
+                _light: {
+                    _text: {
+                        color: string;
+                    };
+                    _astrick: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    _text: {
+                        color: string;
+                    };
+                    _astrick: {
+                        color: string;
+                    };
+                };
             };
         };
         FormControlHelperText: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 mt: string;
                 _text: {
                     fontSize: string;
-                    color: any;
+                };
+                _light: {
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         FormControlErrorMessage: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 mt: string;
                 _text: {
                     fontSize: string;
-                    color: any;
                 };
                 _stack: {
                     space: number;
                     alignItems: string;
                 };
+                _light: {
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    _text: {
+                        color: string;
+                    };
+                };
             };
         };
         Heading: {
-            baseStyle: (props: Record<string, any>) => {
-                color: any;
+            baseStyle: () => {
+                _light: {
+                    color: string;
+                };
+                _dark: {
+                    color: string;
+                };
                 fontWeight: string;
-                fontFamily: string;
                 lineHeight: string;
             };
             sizes: {
                 '4xl': {
                     fontSize: (string | null)[];
+                    letterSpacing: string;
                 };
                 '3xl': {
                     fontSize: (string | null)[];
+                    letterSpacing: string;
                 };
                 '2xl': {
                     fontSize: (string | null)[];
@@ -1710,11 +2195,16 @@ export declare const myTheme: {
             defaultProps: {};
         };
         Icon: {
-            baseStyle: (props: Record<string, any>) => {
-                color: any;
+            baseStyle: () => {
+                _light: {
+                    color: string;
+                };
+                _dark: {
+                    color: string;
+                };
             };
             sizes: {
-                xxs: number;
+                '2xs': number;
                 xs: number;
                 sm: number;
                 md: number;
@@ -1733,87 +2223,237 @@ export declare const myTheme: {
         IconButton: {
             baseStyle: (props: any) => {
                 borderRadius: string;
+                flexDirection: string;
+                justifyContent: string;
+                alignItems: string;
                 _web: {
+                    _disabled: {
+                        cursor: string;
+                    };
+                    _loading: {
+                        cursor: string;
+                    };
                     cursor: string;
+                    userSelect: string;
+                };
+                _focus: {
+                    borderColor: string;
                 };
                 _focusVisible: {
-                    style: {
-                        boxShadow: string;
-                    } | {
-                        boxShadow?: undefined;
+                    _web: {
+                        style: any;
                     };
                 };
+                _loading: {
+                    opacity: string;
+                };
                 _disabled: {
-                    opacity: number;
+                    opacity: string;
                 };
             };
             variants: {
-                ghost: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    bg: string;
-                    _web: {
-                        outlineWidth: number;
+                ghost: ({ colorScheme }: Record<string, any>) => {
+                    _light: {
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            bg: string;
+                        };
+                        _pressed: {
+                            bg: string;
+                        };
                     };
-                    _hover: {
-                        bg: string;
-                    };
-                    _focusVisible: {
-                        bg: string;
-                    };
-                    _pressed: {
-                        bg: string;
+                    _dark: {
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            bg: string;
+                        };
+                        _pressed: {
+                            bg: string;
+                        };
                     };
                 };
-                outline: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
+                outline: ({ colorScheme }: Record<string, any>) => {
                     borderWidth: string;
-                    borderColor: string;
-                    _icon: {
-                        color: any;
+                    _light: {
+                        borderColor: string;
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _pressed: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _focus: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
                     };
-                    _web: {
-                        outlineWidth: number;
-                    };
-                    _hover: {
-                        bg: string;
-                    };
-                    _focusVisible: {
-                        bg: string;
-                    };
-                    _pressed: {
-                        bg: string;
+                    _dark: {
+                        borderColor: string;
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _pressed: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _focus: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
                     };
                 };
-                solid: (props: import("native-base/lib/typescript/theme/tools").Dict) => {
-                    bg: string;
-                    _web: {
-                        outlineWidth: number;
-                    };
-                    _disabled: {
-                        bg: any;
-                    };
-                    _hover: {
+                solid: ({ colorScheme }: Record<string, any>) => {
+                    _light: {
                         bg: string;
+                        _hover: {
+                            bg: string;
+                        };
+                        _pressed: {
+                            bg: string;
+                        };
+                        _icon: {
+                            color: string;
+                        };
                     };
-                    _pressed: {
+                    _dark: {
                         bg: string;
-                    };
-                    _focus: {
-                        bg: string;
-                    };
-                    _icon: {
-                        color: any;
+                        _hover: {
+                            bg: string;
+                        };
+                        _pressed: {
+                            bg: string;
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _icon: {
+                            color: string;
+                        };
                     };
                 };
-                unstyled: () => {};
+                subtle: ({ colorScheme }: Record<string, any>) => {
+                    _text: {
+                        color: string;
+                    };
+                    _icon: {
+                        color: string;
+                    };
+                    _light: {
+                        bg: string;
+                        _hover: {
+                            bg: string;
+                        };
+                        _pressed: {
+                            bg: string;
+                        };
+                    };
+                    _dark: {
+                        bg: string;
+                        _hover: {
+                            bg: string;
+                        };
+                        _pressed: {
+                            bg: string;
+                        };
+                    };
+                };
+                link: ({ colorScheme }: Record<string, any>) => {
+                    _spinner: {
+                        color: string;
+                    };
+                    _light: {
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _pressed: {
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                    };
+                    _dark: {
+                        _icon: {
+                            color: string;
+                        };
+                        _hover: {
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                        _pressed: {
+                            _icon: {
+                                color: string;
+                            };
+                        };
+                    };
+                };
+                unstyled: () => {
+                    _light: {
+                        _icon: {
+                            color: string;
+                        };
+                    };
+                    _dark: {
+                        _icon: {
+                            color: string;
+                        };
+                    };
+                };
             };
             sizes: {
                 lg: {
-                    p: number;
+                    p: string;
+                    _icon: {
+                        size: string;
+                    };
                 };
                 md: {
-                    p: number;
+                    p: string;
+                    _icon: {
+                        size: string;
+                    };
                 };
                 sm: {
-                    p: number;
+                    p: string;
+                    _icon: {
+                        size: string;
+                    };
+                };
+                xs: {
+                    p: string;
+                    _icon: {
+                        size: string;
+                    };
                 };
             };
             defaultProps: {
@@ -1839,29 +2479,137 @@ export declare const myTheme: {
             defaultProps: {};
         };
         Input: {
-            baseStyle: (props: Record<string, any>) => {
-                selectionColor: any;
+            baseStyle: (props: import("native-base/lib/typescript/components/primitives/Input/types").InterfaceInputProps & {
+                theme: any;
+            }) => {
                 fontFamily: string;
-                p: string;
+                py: string;
+                px: string;
                 borderRadius: string;
                 overflow: string;
-                color: any;
-                placeholderTextColor: string;
-                borderColor: any;
                 _disabled: {
                     opacity: string;
-                    bg: any;
-                };
-                _invalid: {
-                    borderColor: any;
-                };
-                _focus: {
-                    borderColor: any;
+                    _web: {
+                        disabled: boolean;
+                        cursor: string;
+                    };
                 };
                 _web: {
                     outlineWidth: string;
                     overflow: string;
                     lineHeight: string;
+                    style: {
+                        outline: string;
+                    };
+                    cursor: string;
+                };
+                _input: {
+                    bg: string;
+                    flex: number;
+                    w: string;
+                    h: string;
+                };
+                _light: {
+                    placeholderTextColor: string;
+                    color: string;
+                    borderColor: string;
+                    _hover: {
+                        borderColor: string;
+                    };
+                    _focus: {
+                        borderColor: string;
+                        _hover: {
+                            borderColor: string;
+                        };
+                        _stack: {
+                            style: {
+                                outlineWidth: string;
+                                outlineColor: string;
+                                outlineStyle: string;
+                            };
+                        };
+                    };
+                    _invalid: {
+                        borderColor: string;
+                        _hover: {
+                            borderColor: string;
+                        };
+                        _stack: {
+                            style: {
+                                outlineWidth: string;
+                                outlineColor: string;
+                                outlineStyle: string;
+                            };
+                        };
+                    };
+                    _ios: {
+                        selectionColor: string;
+                    };
+                    _android: {
+                        selectionColor: string;
+                    };
+                    _disabled: {
+                        placeholderTextColor: string;
+                        _hover: {
+                            borderColor: string;
+                        };
+                    };
+                    _stack: {
+                        flexDirection: string;
+                        alignItems: string;
+                        overflow: string;
+                    };
+                };
+                _dark: {
+                    placeholderTextColor: string;
+                    color: string;
+                    borderColor: string;
+                    _hover: {
+                        borderColor: string;
+                    };
+                    _focus: {
+                        borderColor: string;
+                        _hover: {
+                            borderColor: string;
+                        };
+                        _stack: {
+                            style: {
+                                outlineWidth: string;
+                                outlineColor: string;
+                                outlineStyle: string;
+                            };
+                        };
+                    };
+                    _invalid: {
+                        borderColor: string;
+                        _stack: {
+                            style: {
+                                outlineWidth: string;
+                                outlineColor: string;
+                                outlineStyle: string;
+                            };
+                        };
+                        _hover: {
+                            borderColor: string;
+                        };
+                    };
+                    _ios: {
+                        selectionColor: string;
+                    };
+                    _android: {
+                        selectionColor: string;
+                    };
+                    _disabled: {
+                        placeholderTextColor: string;
+                        _hover: {
+                            borderColor: string;
+                        };
+                    };
+                    _stack: {
+                        flexDirection: string;
+                        alignItems: string;
+                        overflow: string;
+                    };
                 };
             };
             defaultProps: {
@@ -1869,37 +2617,11 @@ export declare const myTheme: {
                 variant: string;
             };
             variants: {
-                outline: (props: Record<string, any>) => {
-                    borderWidth: string;
-                    _hover: {
-                        bg: any;
-                    };
-                };
-                underlined: () => {
-                    borderRadius: string;
-                    borderTopWidth: string;
-                    borderLeftWidth: string;
-                    borderRightWidth: string;
-                    borderBottomWidth: string;
-                };
-                rounded: (props: Record<string, any>) => {
-                    borderRadius: string;
-                    borderWidth: string;
-                    _hover: {
-                        bg: any;
-                    };
-                };
-                filled: (props: Record<string, any>) => {
-                    bg: any;
-                    borderWidth: string;
-                    borderColor: string;
-                    _hover: {
-                        bg: any;
-                    };
-                };
-                unstyled: () => {
-                    borderWidth: string;
-                };
+                outline: any;
+                underlined: any;
+                rounded: any;
+                filled: any;
+                unstyled: any;
             };
             sizes: {
                 '2xl': {
@@ -1923,28 +2645,56 @@ export declare const myTheme: {
             };
         };
         InputLeftAddon: {
-            baseStyle: (props: Record<string, any>) => {
-                borderRightWidth: string;
-                roundedLeft: string;
-                bg: any;
+            baseStyle: () => {
                 p: string;
-                borderColor: any;
                 borderWidth: string;
+                borderRightWidth: string;
+                borderLeftRadius: string;
                 _text: {
-                    color: any;
+                    fontWeight: number;
+                };
+                alignItems: string;
+                justifyContent: string;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         InputRightAddon: {
-            baseStyle: (props: Record<string, any>) => {
-                borderLeftWidth: string;
-                roundedRight: string;
-                bg: any;
+            baseStyle: () => {
                 p: string;
-                borderColor: any;
                 borderWidth: string;
+                borderLeftWidth: string;
+                borderRightRadius: string;
                 _text: {
-                    color: any;
+                    fontWeight: number;
+                };
+                alignItems: string;
+                justifyContent: string;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
@@ -2003,16 +2753,19 @@ export declare const myTheme: {
             };
         };
         Menu: {
-            baseStyle: (props: Record<string, any>) => {
-                bg: any;
+            baseStyle: {
                 py: number;
-                borderWidth: number;
-                borderColor: any;
                 borderRadius: string;
-                transition: {
+                shadow: number;
+                _light: {
+                    bg: string;
+                };
+                _dark: {
+                    bg: string;
+                };
+                _presenceTransition: {
                     initial: {
                         opacity: number;
-                        translateY: number;
                     };
                     animate: {
                         opacity: number;
@@ -2023,45 +2776,115 @@ export declare const myTheme: {
                     };
                     exit: {
                         opacity: number;
-                        translateY: number;
                         transition: {
                             duration: number;
                         };
                     };
                     style: any;
                 };
+                _overlay: {};
+                _backdrop: {
+                    bg: string;
+                };
             };
         };
         MenuGroup: {
-            baseStyle: (props: any) => {
+            baseStyle: {
                 _title: {
                     fontSize: string;
-                    fontWeight: number;
                     textTransform: string;
-                    color: any;
+                    _light: {
+                        color: string;
+                    };
+                    _dark: {
+                        color: string;
+                    };
                 };
                 p: number;
             };
         };
         MenuItem: {
-            baseStyle: (props: any) => {
+            baseStyle: {
                 px: number;
                 py: number;
-                outlineWidth: number | undefined;
-                _disabled: {
-                    _text: {
-                        color: any;
-                    };
+                _web: {
+                    outlineWidth: number;
                 };
-                _focus: {
-                    bg: any;
-                };
-                _pressed: {
-                    bg: any;
+                _stack: {
+                    alignItems: string;
+                    px: number;
+                    space: number;
                 };
                 _icon: {
                     size: number;
-                    color: any;
+                    opacity: number;
+                };
+                _light: {
+                    _text: {
+                        color: string;
+                    };
+                    _disabled: {
+                        _text: {
+                            color: string;
+                        };
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _focus: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                    _icon: {
+                        color: string;
+                    };
+                    _focusVisible: {
+                        _web: {
+                            outlineWidth: string;
+                            style: {
+                                boxShadow: string;
+                            };
+                            bg: string;
+                        };
+                    };
+                };
+                _dark: {
+                    _text: {
+                        color: string;
+                    };
+                    _disabled: {
+                        _text: {
+                            color: string;
+                        };
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _focus: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                    _icon: {
+                        color: string;
+                    };
+                };
+                _focusVisible: {
+                    _web: {
+                        outlineWidth: string;
+                        style: {
+                            boxShadow: string;
+                        };
+                        bg: string;
+                    };
+                };
+                _checked: {
+                    _icon: {
+                        opacity: number;
+                    };
                 };
             };
             defaultProps: {};
@@ -2072,6 +2895,21 @@ export declare const myTheme: {
                 height: string;
                 justifyContent: string;
                 alignItems: string;
+                _web: {
+                    pointerEvents: string;
+                };
+                _backdropFade: {
+                    exitDuration: number;
+                    entryDuration: number;
+                };
+                _slide: {
+                    overlay: boolean;
+                    duration: number;
+                };
+                _fade: {
+                    exitDuration: number;
+                    entryDuration: number;
+                };
             };
             sizes: {
                 xs: {
@@ -2116,47 +2954,80 @@ export declare const myTheme: {
             };
         };
         ModalContent: {
-            baseStyle: (props: Record<string, any>) => {
-                bg: any;
-                _text: {
-                    color: any;
-                };
+            baseStyle: () => {
                 shadow: number;
                 rounded: string;
                 maxHeight: string;
                 overflow: string;
+                _light: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
+                };
             };
         };
         ModalHeader: {
-            baseStyle: (props: Record<string, any>) => {
-                py: string;
-                px: string;
+            baseStyle: () => {
+                p: string;
                 borderBottomWidth: string;
-                borderColor: any;
                 _text: {
                     fontSize: string;
                     fontWeight: string;
-                    color: any;
                     lineHeight: string;
+                };
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         ModalBody: {
-            baseStyle: (props: Record<string, any>) => {
-                pt: string;
+            baseStyle: () => {
                 p: string;
-                _text: {
-                    color: any;
+                _light: {
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         ModalFooter: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 p: string;
-                bg: any;
                 flexDirection: string;
                 justifyContent: string;
                 flexWrap: string;
+                borderTopWidth: number;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                };
             };
         };
         ModalOverlay: {
@@ -2170,16 +3041,43 @@ export declare const myTheme: {
             };
         };
         ModalCloseButton: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 position: string;
                 right: string;
                 top: string;
                 zIndex: string;
                 colorScheme: string;
                 p: string;
+                bg: string;
+                borderRadius: string;
+                _web: {
+                    outlineWidth: number;
+                    cursor: string;
+                };
                 _icon: {
                     size: string;
-                    color: any;
+                };
+                _light: {
+                    _icon: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                };
+                _dark: {
+                    _icon: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
                 };
             };
         };
@@ -2189,6 +3087,21 @@ export declare const myTheme: {
                 height: string;
                 justifyContent: string;
                 alignItems: string;
+                _web: {
+                    pointerEvents: string;
+                };
+                _backdropFade: {
+                    exitDuration: number;
+                    entryDuration: number;
+                };
+                _fade: {
+                    exitDuration: number;
+                    entryDuration: number;
+                };
+                _slide: {
+                    duration: number;
+                    overlay: boolean;
+                };
             };
             sizes: {
                 xs: {
@@ -2233,47 +3146,80 @@ export declare const myTheme: {
             };
         };
         AlertDialogContent: {
-            baseStyle: (props: Record<string, any>) => {
-                bg: any;
-                _text: {
-                    color: any;
-                };
+            baseStyle: () => {
                 shadow: number;
                 rounded: string;
                 maxHeight: string;
                 overflow: string;
+                _light: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    color: string;
+                };
             };
         };
         AlertDialogHeader: {
-            baseStyle: (props: Record<string, any>) => {
-                py: string;
-                px: string;
+            baseStyle: () => {
+                p: string;
                 borderBottomWidth: string;
-                borderColor: any;
                 _text: {
                     fontSize: string;
                     fontWeight: string;
-                    color: any;
                     lineHeight: string;
+                };
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         AlertDialogBody: {
-            baseStyle: (props: Record<string, any>) => {
-                pt: string;
+            baseStyle: () => {
                 p: string;
-                _text: {
-                    color: any;
+                _light: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
+                };
+                _dark: {
+                    bg: string;
+                    _text: {
+                        color: string;
+                    };
                 };
             };
         };
         AlertDialogFooter: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 p: string;
-                bg: any;
                 flexDirection: string;
                 justifyContent: string;
                 flexWrap: string;
+                borderTopWidth: string;
+                _light: {
+                    bg: string;
+                    borderColor: string;
+                };
+                _dark: {
+                    bg: string;
+                    borderColor: string;
+                };
             };
         };
         AlertDialogOverlay: {
@@ -2287,16 +3233,42 @@ export declare const myTheme: {
             };
         };
         AlertDialogCloseButton: {
-            baseStyle: (props: Record<string, any>) => {
+            baseStyle: () => {
                 position: string;
                 right: string;
                 top: string;
                 zIndex: string;
-                colorScheme: string;
                 p: string;
+                bg: string;
+                borderRadius: string;
+                _web: {
+                    outlineWidth: number;
+                    cursor: string;
+                };
                 _icon: {
                     size: string;
-                    color: any;
+                };
+                _light: {
+                    _icon: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
+                };
+                _dark: {
+                    _icon: {
+                        color: string;
+                    };
+                    _hover: {
+                        bg: string;
+                    };
+                    _pressed: {
+                        bg: string;
+                    };
                 };
             };
         };
@@ -2382,7 +3354,13 @@ export declare const myTheme: {
             };
         };
         Pressable: {
-            baseStyle: {};
+            baseStyle: (props: any) => {
+                _focusVisible: {
+                    _web: {
+                        style: any;
+                    };
+                };
+            };
             defaultProps: {};
         };
     };
@@ -2974,6 +3952,18 @@ export declare const myTheme: {
             900: string;
         };
         dark: {
+            50: string;
+            100: string;
+            200: string;
+            300: string;
+            400: string;
+            500: string;
+            600: string;
+            700: string;
+            800: string;
+            900: string;
+        };
+        text: {
             50: string;
             100: string;
             200: string;

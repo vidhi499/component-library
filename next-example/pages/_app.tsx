@@ -1,10 +1,12 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
-import { NativeBaseProvider } from 'native-base';
+// import { NativeBaseProvider } from 'native-base';
+import { NativeBaseProvider } from 'comp-lib-template';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <NativeBaseProvider >
+    <NativeBaseProvider isSSR>
       <Component {...pageProps} />
     </NativeBaseProvider>
   );

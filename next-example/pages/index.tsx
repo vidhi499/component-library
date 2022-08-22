@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import { Text } from 'react-native';
-import { Box,  Button } from 'native-base';
+import { Box,  Button } from 'comp-lib-template';
 
 const Home: NextPage = () => {
 return <Button>Button 22</Button>
