@@ -1,5 +1,10 @@
 import React from "react";
-import { NativeBaseProvider, Button, ButtonArgs, Box } from "my-com-lib";
+import {
+  NativeBaseProvider,
+  Button,
+  StorybookButtonArgs,
+  Box,
+} from "my-com-lib";
 
 const ButtonTest = ({ ...args }) => {
   return (
@@ -17,5 +22,5 @@ export const Primary = ButtonTest.bind({});
 export default {
   title: "Button",
   component: Primary,
-  argTypes: ButtonArgs,
+  argTypes: StorybookButtonArgs,
 };
