@@ -1,8 +1,9 @@
 import React from "react";
+// import { NativeBaseProvider, Heading, Box } from "native-base";
 import {
+  StorybookHeadingArgs,
   NativeBaseProvider,
   Heading,
-  StorybookHeadingArgs,
   Box,
 } from "my-com-lib";
 

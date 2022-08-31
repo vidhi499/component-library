@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export declare const InputGroup: ({ ...props }: any) => JSX.Element;
+export declare const InputGroup: ({ variant, backgroundColor, iconBackground, ...props }: any) => JSX.Element;

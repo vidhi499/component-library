@@ -7,7 +7,12 @@ import {
   ThreeDotsIcon,
 } from "native-base";
 
-export const InputGroup = ({ ...props }: any) => {
+export const InputGroup = ({
+  variant,
+  backgroundColor,
+  iconBackground,
+  ...props
+}: any) => {
   return (
     <HStack
       borderWidth={1}
@@ -15,16 +20,20 @@ export const InputGroup = ({ ...props }: any) => {
       alignItems={"center"}
       borderRadius="full"
       borderColor={"gray.300"}
+      bg={backgroundColor}
     >
       <Box pl="3">
         <SearchIcon size="3" />
       </Box>
       <NBInput
-        variant={"unstyled"}
+        _hover={{
+          bg: "red.100",
+        }}
+        variant={variant}
         {...props}
         placeholder="Enter Here"
       ></NBInput>
-      <Box px="3">
+      <Box px="3" bg={iconBackground}>
         <ThreeDotsIcon size="3" />
       </Box>
     </HStack>

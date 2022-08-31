@@ -1,0 +1,1 @@
+{"version":3,"names":[],"sources":["index.tsx"],"sourcesContent":["export { NativeBaseProvider } from \"./NativebaseProvider\";\n"],"mappings":"kMAAA"}

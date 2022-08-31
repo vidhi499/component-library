@@ -234,34 +234,5 @@ export const TextArgs = {
   metaData: {
     heading: "Typography",
     "sub-heading": "Text",
-    // "other-info": {
-    //   variants: [
-    //     {
-    //       Solid:
-    //         "Solid Buttons have containers filled with color and indicate the main action. There should be one primary button at most in one section.",
-    //     },
-    //     {
-    //       Outlined:
-    //         "Outlined buttons indicate a series of actions without priority.",
-    //     },
-    //     { Link: "Link button is used for external links." },
-    //     {
-    //       Ghost:
-    //         "Ghost button is used in situations with complex backgrounds, home pages, usually.",
-    //     },
-    //     {
-    //       Disabled:
-    //         "The disabled button is used when actions are not available.",
-    //     },
-    //     {
-    //       Loading:
-    //         "Loading button includes loading spinner in button, avoiding multiple submits too.",
-    //     },
-    //     {
-    //       "Button with icon":
-    //         "Includes icons in the Button component using the leftIcon and rightIcon props, respectively.",
-    //     },
-    //   ],
-    // },
   },
 };

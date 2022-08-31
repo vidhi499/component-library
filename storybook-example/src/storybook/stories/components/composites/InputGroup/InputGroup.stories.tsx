@@ -1,5 +1,10 @@
 import React from "react";
-import { NativeBaseProvider, InputGroup, Box } from "my-com-lib";
+import {
+  NativeBaseProvider,
+  InputGroup,
+  Box,
+  StorybookInputGroupArgs,
+} from "my-com-lib";
 
 const InputGroupTest = ({ ...args }) => {
   return (
@@ -20,5 +25,5 @@ export const Primary = InputGroupTest.bind({});
 export default {
   title: "InputGroup",
   component: Primary,
-  // argTypes: StorybookInputGroupArgs,
+  argTypes: StorybookInputGroupArgs,
 };

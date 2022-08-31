@@ -8,7 +8,7 @@ export const NativeBaseProvider = ({ children, theme, ...props }: any) => {
     //TODO: if theme is array it might break
     themeArr.push(theme);
   }
-  console.log(props, "TEST");
+
   return (
     <NBProvider theme={myTheme} {...props}>
       {children}
