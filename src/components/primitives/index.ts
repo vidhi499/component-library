@@ -7,4 +7,38 @@ export { Heading } from "./Heading";
 export { Stack, HStack, VStack } from "./Stack";
 export { StorybookTextArgs, TextArgs } from "./Text/TextArgs";
 export { StorybookHeadingArgs } from "./Heading/HeadingArgs";
-export { IconArgs } from "./Icon/IconArgs";
+export { StorybookIconArgs } from "./Icon/IconArgs";
+
+export {
+  MoonIcon,
+  SunIcon,
+  CheckIcon,
+  CircleIcon,
+  ArrowBackIcon,
+  AddIcon,
+  ArrowForwardIcon,
+  ArrowUpIcon,
+  ArrowDownIcon,
+  CheckCircleIcon,
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronUpIcon,
+  CloseIcon,
+  SmallCloseIcon,
+  HamburgerIcon,
+  InfoIcon,
+  InfoOutlineIcon,
+  MinusIcon,
+  QuestionIcon,
+  QuestionOutlineIcon,
+  SearchIcon,
+  WarningIcon,
+  WarningTwoIcon,
+  ThreeDotsIcon,
+  WarningOutlineIcon,
+  ShareIcon,
+  PlayIcon,
+  FavouriteIcon,
+  DeleteIcon,
+} from "native-base";

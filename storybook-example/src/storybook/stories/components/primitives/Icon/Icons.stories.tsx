@@ -5,12 +5,15 @@ import {
   StorybookHeadingArgs,
   Box,
   Icon,
+  StorybookIconArgs,
+  AddIcon,
 } from "my-com-lib";
+// import { StorybookIconArgs } from "../../../../../../../src/components/primitives/Icon/IconArgs";
 
 const HeadingComponent = ({ ...args }) => {
   return (
     <NativeBaseProvider>
-      <Icon />
+      <AddIcon {...args} />
     </NativeBaseProvider>
   );
 };
@@ -18,7 +21,7 @@ const HeadingComponent = ({ ...args }) => {
 export const Basic = HeadingComponent.bind({});
 
 export default {
-  title: "Heading",
+  title: "Icon",
   component: Basic,
-  argTypes: StorybookHeadingArgs,
+  argTypes: StorybookIconArgs,
 };

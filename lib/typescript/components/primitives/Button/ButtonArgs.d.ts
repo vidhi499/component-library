@@ -54,16 +54,6 @@ export declare const StorybookButtonArgs: {
             type: string;
         };
     };
-    isLoading: {
-        name: string;
-        type: {
-            name: string;
-        };
-        defaultValue: boolean;
-        control: {
-            type: string;
-        };
-    };
     isPressed: {
         name: string;
         type: {

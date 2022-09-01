@@ -57,16 +57,6 @@ export declare const config: {
                         type: string;
                     };
                 };
-                isLoading: {
-                    name: string;
-                    type: {
-                        name: string;
-                    };
-                    defaultValue: boolean;
-                    control: {
-                        type: string;
-                    };
-                };
                 isPressed: {
                     name: string;
                     type: {
@@ -96,6 +86,208 @@ export declare const config: {
                 component: string;
                 metaData: {
                     heading: string;
+                };
+            };
+        };
+        Text: {
+            args: {
+                children: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                };
+                fontSize: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                    options: string[];
+                };
+                italic: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                bold: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                underline: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                highlight: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                sub: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                strikeThrough: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                isTruncated: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+            };
+            pageConfig: {
+                type: string;
+                section: string;
+                row: string;
+                component: string;
+                metaData: {
+                    heading: string;
+                    "sub-heading": string;
+                };
+            };
+        };
+        Heading: {
+            args: {
+                children: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                };
+                size: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                    options: string[];
+                };
+            };
+            pageConfig: {
+                type: string;
+                section: string;
+                row: string;
+                component: string;
+                metaData: {
+                    heading: string;
+                    "sub-heading": string;
+                };
+            };
+        };
+        InputGroup: {
+            args: {
+                backgroundColor: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    options: string[];
+                    control: {
+                        type: string;
+                    };
+                };
+                iconBackground: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    options: string[];
+                    control: {
+                        type: string;
+                    };
+                };
+                variant: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    options: string[];
+                    control: {
+                        type: string;
+                    };
+                };
+                isHovered: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+            };
+            pageConfig: {
+                type: string;
+                section: string;
+                row: string;
+                component: string;
+                metaData: {
+                    heading: string;
+                    "sub-heading": string;
                 };
             };
         };

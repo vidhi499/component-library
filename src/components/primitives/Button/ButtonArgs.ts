@@ -1,19 +1,20 @@
 import { myTheme as theme } from "../../../theme";
 
-const {
-  contrastThreshold,
-  white,
-  black,
-  lightText,
-  darkText,
-  ...remColors
-} = theme.colors;
+// const {
+//   contrastThreshold,
+//   white,
+//   black,
+//   lightText,
+//   darkText,
+//   // ...remColors
+// } = theme.colors;
 export const StorybookButtonArgs = {
   colorScheme: {
     name: "colorScheme",
     type: { name: "string", required: true },
     defaultValue: "primary",
-    options: Object.keys(remColors),
+    // options: Object.keys(remColors),
+    options: ["primary", "secondary", "tertiary"],
     control: {
       type: "select",
     },
@@ -58,17 +59,17 @@ export const StorybookButtonArgs = {
       type: "boolean",
     },
   },
-  isLoading: {
-    name: "isLoading",
-    type: {
-      name: "boolean",
-    },
-    defaultValue: false,
+  // isLoading: {
+  //   name: "isLoading",
+  //   type: {
+  //     name: "boolean",
+  //   },
+  //   defaultValue: false,
 
-    control: {
-      type: "boolean",
-    },
-  },
+  //   control: {
+  //     type: "boolean",
+  //   },
+  // },
   isPressed: {
     name: "isPressed",
     type: {
