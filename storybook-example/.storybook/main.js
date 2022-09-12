@@ -46,6 +46,15 @@ module.exports = {
     });
 
     config.module.rules.push({
+      test: /\.ttf$/,
+      loader: "url-loader", // or directly file-loader
+      include: path.resolve(
+        __dirname,
+        "node_modules/react-native-vector-icons"
+      ),
+    });
+
+    config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
       include: path.resolve(root, "../src"),
       use: ["babel-loader"],

@@ -1,5 +1,5 @@
 export declare const StorybookIconArgs: {
-    sizes: {
+    size: {
         name: string;
         type: {
             name: string;
@@ -9,6 +9,28 @@ export declare const StorybookIconArgs: {
             type: string;
         };
         options: string[];
+    };
+    as: {
+        name: string;
+        type: {
+            name: string;
+        };
+        defaultValue: string;
+        control: {
+            type: string;
+        };
+        options: string[];
+    };
+    name: {
+        name: string;
+        type: {
+            name: string;
+            required: boolean;
+        };
+        defaultValue: string;
+        control: {
+            type: string;
+        };
     };
 };
 export declare const IconArgs: {

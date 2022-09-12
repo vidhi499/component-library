@@ -81,7 +81,18 @@ export const StorybookButtonArgs = {
       type: "boolean",
     },
   },
-  sizes: {
+  isFocusVisible: {
+    name: "isFocusVisible",
+    type: {
+      name: "boolean",
+    },
+    defaultValue: false,
+
+    control: {
+      type: "boolean",
+    },
+  },
+  size: {
     name: "size",
     type: {
       name: "string",

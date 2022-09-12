@@ -67,7 +67,17 @@ export declare const config: {
                         type: string;
                     };
                 };
-                sizes: {
+                isFocusVisible: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                size: {
                     name: string;
                     type: {
                         name: string;
@@ -291,60 +301,123 @@ export declare const config: {
                 };
             };
         };
+        Input: {
+            args: {
+                variant: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    options: string[];
+                    control: {
+                        type: string;
+                    };
+                };
+                placeholder: {
+                    name: string;
+                    type: {
+                        name: string;
+                        required: boolean;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                };
+                isHovered: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                isDisabled: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: boolean;
+                    control: {
+                        type: string;
+                    };
+                };
+                size: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                    options: string[];
+                };
+            };
+            pageConfig: {
+                type: string;
+                section: string;
+                row: string;
+                component: string;
+                metaData: {
+                    heading: string;
+                };
+            };
+        };
+        Icon: {
+            args: {
+                size: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                    options: string[];
+                };
+                as: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    control: {
+                        type: string;
+                    };
+                    options: string[];
+                };
+                name: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    options: string[];
+                    control: {
+                        type: string;
+                    };
+                };
+            };
+            pageConfig: {
+                type: string;
+                section: string;
+                row: string;
+                component: string;
+                metaData: {
+                    heading: string;
+                    "sub-heading": string;
+                };
+            };
+        };
     };
     foundation: {
         Colors: {};
     };
     theme: {
-        colors: {
-            newColor: {
-                "50": string;
-                "100": string;
-                "200": string;
-                "300": string;
-                "400": string;
-                "500": string;
-                "600": string;
-                "700": string;
-                "800": string;
-                "900": string;
-            };
-            primary: {
-                "50": string;
-                "100": string;
-                "200": string;
-                "300": string;
-                "400": string;
-                "500": string;
-                "600": string;
-                "700": string;
-                "800": string;
-                "900": string;
-            };
-        };
-        components: {
-            Button: {
-                variants: {
-                    solid: () => {
-                        bg: string;
-                        rounded: string;
-                    };
-                    rounded: () => {
-                        bg: string;
-                        rounded: string;
-                        opacity: string;
-                    };
-                };
-            };
-            Checkbox: {
-                sizes: {
-                    xl: {
-                        boxSize: string;
-                    };
-                };
-            };
-        };
-    } & {
         components: {
             Progress: {
                 baseStyle: (props: Record<string, any>) => {

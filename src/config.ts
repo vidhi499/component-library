@@ -2,6 +2,8 @@ import { StorybookInputGroupArgs } from "./components/composites";
 import {
   StorybookButtonArgs,
   StorybookHeadingArgs,
+  StorybookIconArgs,
+  StorybookInputArgs,
   StorybookTextArgs,
 } from "./components/primitives";
 import { myTheme } from "./theme";
@@ -12,7 +14,7 @@ export const config = {
       args: StorybookButtonArgs,
       pageConfig: {
         type: "variant",
-        section: "sizes",
+        section: "size",
         row: "colorScheme",
         component: "states",
         metaData: {
@@ -56,6 +58,75 @@ export const config = {
         metaData: {
           heading: "InputGroup",
           "sub-heading": "This is an custom input.",
+        },
+      },
+    },
+    Input: {
+      args: StorybookInputArgs,
+      pageConfig: {
+        type: "variant",
+        section: "component",
+        row: "size",
+        component: "states",
+        metaData: {
+          heading: "This is an Input.",
+        },
+      },
+    },
+    // AddIcon: {
+    //   args: StorybookIconArgs,
+    //   pageConfig: {
+    //     type: "",
+    //     section: "component",
+    //     row: "size",
+    //     component: "states",
+    //     metaData: {
+    //       heading: "Add Icon.",
+    //     },
+    //   },
+    // },
+    Icon: {
+      args: {
+        size: { ...StorybookIconArgs.size },
+        as: {
+          name: "as",
+          type: {
+            name: "string",
+          },
+          control: {
+            type: "select",
+          },
+          options: ["Entypo"],
+        },
+        name: {
+          name: "name",
+          type: {
+            name: "string",
+          },
+          options: [
+            "500px",
+            "add-to-list",
+            "add-user",
+            "address",
+            "adjust",
+            "attachment",
+            "folder",
+            "infinity",
+            "instagram",
+          ],
+          control: {
+            type: "select",
+          },
+        },
+      },
+      pageConfig: {
+        type: "",
+        section: "name",
+        row: "size",
+        component: "states",
+        metaData: {
+          heading: "Icons",
+          "sub-heading": "Few icons from Entypo lib.",
         },
       },
     },

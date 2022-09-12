@@ -1,24 +1,17 @@
 import React from "react";
-import {
-  NativeBaseProvider,
-  Heading,
-  StorybookHeadingArgs,
-  Box,
-  Icon,
-  StorybookIconArgs,
-  AddIcon,
-} from "my-com-lib";
-// import { StorybookIconArgs } from "../../../../../../../src/components/primitives/Icon/IconArgs";
+import { NativeBaseProvider, Icon, StorybookIconArgs, Box } from "my-com-lib";
 
-const HeadingComponent = ({ ...args }) => {
+const IconComponent = ({ ...args }) => {
   return (
     <NativeBaseProvider>
-      <AddIcon {...args} />
+      <Box justifyContent={"center"} alignItems={"center"}>
+        <Icon {...args} color="coolGray.800" />
+      </Box>
     </NativeBaseProvider>
   );
 };
 
-export const Basic = HeadingComponent.bind({});
+export const Basic = IconComponent.bind({});
 
 export default {
   title: "Icon",
