@@ -73,18 +73,20 @@ export const config = {
         },
       },
     },
-    // AddIcon: {
-    //   args: StorybookIconArgs,
-    //   pageConfig: {
-    //     type: "",
-    //     section: "component",
-    //     row: "size",
-    //     component: "states",
-    //     metaData: {
-    //       heading: "Add Icon.",
-    //     },
-    //   },
-    // },
+    AddIcon: {
+      args: {
+        size: { ...StorybookIconArgs.size },
+      },
+      pageConfig: {
+        type: "",
+        section: "component",
+        row: "size",
+        component: "states",
+        metaData: {
+          heading: "Add Icon.",
+        },
+      },
+    },
     Icon: {
       args: {
         size: { ...StorybookIconArgs.size },

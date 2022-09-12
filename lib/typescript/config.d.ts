@@ -368,6 +368,30 @@ export declare const config: {
                 };
             };
         };
+        AddIcon: {
+            args: {
+                size: {
+                    name: string;
+                    type: {
+                        name: string;
+                    };
+                    defaultValue: string;
+                    control: {
+                        type: string;
+                    };
+                    options: string[];
+                };
+            };
+            pageConfig: {
+                type: string;
+                section: string;
+                row: string;
+                component: string;
+                metaData: {
+                    heading: string;
+                };
+            };
+        };
         Icon: {
             args: {
                 size: {
