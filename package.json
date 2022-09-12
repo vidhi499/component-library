@@ -1,6 +1,6 @@
 {
   "name": "comp-lib-template",
-  "version": "0.1.57",
+  "version": "0.1.58",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
