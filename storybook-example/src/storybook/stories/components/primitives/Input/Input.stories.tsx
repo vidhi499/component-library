@@ -9,14 +9,13 @@ import {
   Input,
   StorybookInputArgs,
 } from "my-com-lib";
+import { Wrapper } from "../../Wrapper";
 
 const InputComponent = ({ ...args }) => {
   return (
-    <NativeBaseProvider>
-      <Box alignItems={"center"}>
-        <Input {...args} w="40%" />
-      </Box>
-    </NativeBaseProvider>
+    <Wrapper>
+      <Input {...args} w="40%" />
+    </Wrapper>
   );
 };
 

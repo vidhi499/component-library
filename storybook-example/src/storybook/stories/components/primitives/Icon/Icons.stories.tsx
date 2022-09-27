@@ -1,13 +1,12 @@
 import React from "react";
 import { NativeBaseProvider, Icon, StorybookIconArgs, Box } from "my-com-lib";
+import { Wrapper } from "../../Wrapper";
 
 const IconComponent = ({ ...args }) => {
   return (
-    <NativeBaseProvider>
-      <Box justifyContent={"center"} alignItems={"center"}>
-        <Icon {...args} color="coolGray.800" />
-      </Box>
-    </NativeBaseProvider>
+    <Wrapper>
+      <Icon {...args} color="coolGray.800" />
+    </Wrapper>
   );
 };
 

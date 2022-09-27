@@ -103,4 +103,8 @@ export const StorybookButtonArgs = {
     },
     options: ["sm", "md", "lg"],
   },
+  leftIcon: {
+    name: "leftIcon",
+    type: {},
+  },
 };

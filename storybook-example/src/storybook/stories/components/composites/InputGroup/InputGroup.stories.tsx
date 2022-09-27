@@ -5,18 +5,16 @@ import {
   Box,
   StorybookInputGroupArgs,
 } from "my-com-lib";
+import { Wrapper } from "../../Wrapper";
 
 const InputGroupTest = ({ ...args }) => {
   return (
-    <NativeBaseProvider>
-      <Box alignItems={"center"}>
-        {/* @ts-ignore */}
-        <InputGroup
-          {...args}
-          onPress={() => console.log("hello world")}
-        ></InputGroup>
-      </Box>
-    </NativeBaseProvider>
+    <Wrapper>
+      <InputGroup
+        {...args}
+        onPress={() => console.log("hello world")}
+      ></InputGroup>
+    </Wrapper>
   );
 };
 

@@ -85,4 +85,8 @@ export declare const StorybookButtonArgs: {
         };
         options: string[];
     };
+    leftIcon: {
+        name: string;
+        type: {};
+    };
 };

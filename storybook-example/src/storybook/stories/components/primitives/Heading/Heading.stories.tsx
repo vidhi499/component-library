@@ -6,14 +6,13 @@ import {
   Heading,
   Box,
 } from "my-com-lib";
+import { Wrapper } from "../../Wrapper";
 
 const HeadingComponent = ({ ...args }) => {
   return (
-    <NativeBaseProvider>
-      <Box alignItems={"center"} w="100%">
-        <Heading {...args}></Heading>
-      </Box>
-    </NativeBaseProvider>
+    <Wrapper>
+      <Heading {...args}></Heading>
+    </Wrapper>
   );
 };
 

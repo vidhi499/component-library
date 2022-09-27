@@ -12,7 +12,7 @@ export const StorybookInputArgs = {
   variant: {
     name: "variant",
     type: { name: "string", required: true },
-    defaultValue: "solid",
+    defaultValue: "rounded",
     options: Object.keys(theme.components.Input.variants),
     control: {
       type: "radio",

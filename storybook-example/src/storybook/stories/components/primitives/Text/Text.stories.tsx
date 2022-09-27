@@ -1,13 +1,12 @@
 import React from "react";
 import { NativeBaseProvider, Text, StorybookTextArgs, Box } from "my-com-lib";
+import { Wrapper } from "../../Wrapper";
 
 const TextComponent = ({ ...args }) => {
   return (
-    <NativeBaseProvider>
-      <Box alignItems={"center"} w="100%">
-        <Text {...args}></Text>
-      </Box>
-    </NativeBaseProvider>
+    <Wrapper>
+      <Text {...args}></Text>
+    </Wrapper>
   );
 };
 

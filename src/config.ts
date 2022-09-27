@@ -1,10 +1,16 @@
 import { StorybookInputGroupArgs } from "./components/composites";
 import {
   StorybookButtonArgs,
+  StorybookCheckboxArgs,
   StorybookHeadingArgs,
   StorybookIconArgs,
   StorybookInputArgs,
+  StorybookLinkArgs,
+  StorybookRadioArgs,
+  StorybookSwitchArgs,
+  StorybookTextAreaArgs,
   StorybookTextArgs,
+  // StorybookTextArgs,
 } from "./components/primitives";
 import { myTheme } from "./theme";
 
@@ -48,6 +54,19 @@ export const config = {
         },
       },
     },
+    // HeadingText: {
+    //   args: StorybookHeadingTextArgs,
+    //   pageConfig: {
+    //     type: "",
+    //     section: "component",
+    //     row: "fontSize",
+    //     component: "states",
+    //     metaData: {
+    //       heading: "Typography",
+    //       "sub-heading": "Heading",
+    //     },
+    //   },
+    // },
     InputGroup: {
       args: StorybookInputGroupArgs,
       pageConfig: {
@@ -70,6 +89,91 @@ export const config = {
         component: "states",
         metaData: {
           heading: "This is an Input.",
+        },
+      },
+    },
+    TextArea: {
+      args: StorybookTextAreaArgs,
+      pageConfig: {
+        type: "",
+        section: "component",
+        row: "",
+        component: "states",
+        metaData: {
+          heading: "This is an Input.",
+        },
+      },
+    },
+    Checkbox: {
+      args: StorybookCheckboxArgs,
+      pageConfig: {
+        type: "",
+        section: "size",
+        row: "colorScheme",
+        component: "states",
+        metaData: {
+          heading: "This is checkbox.",
+        },
+      },
+    },
+    Radio: {
+      args: StorybookRadioArgs,
+      pageConfig: {
+        type: "",
+        section: "size",
+        row: "colorScheme",
+        component: "states",
+        metaData: {
+          heading: "This is Radio.",
+        },
+      },
+    },
+    Link: {
+      args: StorybookLinkArgs,
+      pageConfig: {
+        type: "",
+        section: "",
+        row: "href",
+        component: "states",
+        metaData: {
+          heading: "This is Link.",
+        },
+      },
+    },
+    // Slider: {
+    //   args: StorybookSliderArgs,
+    //   pageConfig: {
+    //     type: "",
+    //     section: "size",
+    //     row: "colorScheme",
+    //     component: "states",
+    //     metaData: {
+    //       heading: "This is Slider.",
+    //     },
+    //   },
+    // },
+    // Select: {
+    //   args: StorybookSliderArgs,
+
+    //   pageConfig: {
+    //     type: "",
+    //     section: "size",
+    //     row: "colorScheme",
+    //     component: "states",
+    //     metaData: {
+    //       heading: "This is Slider.",
+    //     },
+    //   },
+    // },
+    Switch: {
+      args: StorybookSwitchArgs,
+      pageConfig: {
+        type: "",
+        section: "size",
+        row: "colorScheme",
+        component: "states",
+        metaData: {
+          heading: "This is a switch.",
         },
       },
     },

@@ -5,15 +5,13 @@ import {
   StorybookButtonArgs,
   Box,
 } from "my-com-lib";
+import { Wrapper } from "../../Wrapper";
 
 const ButtonTest = ({ ...args }) => {
   return (
-    <NativeBaseProvider>
-      <Box alignItems={"center"}>
-        {/* @ts-ignore */}
-        <Button {...args} onPress={() => console.log("hello world")}></Button>
-      </Box>
-    </NativeBaseProvider>
+    <Wrapper>
+      <Button {...args}></Button>
+    </Wrapper>
   );
 };
 
