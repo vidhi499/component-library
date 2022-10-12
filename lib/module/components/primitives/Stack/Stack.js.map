@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sources":["Stack.tsx"],"sourcesContent":["export { Stack } from \"native-base\";\n"],"mappings":"gKAAA"}
+{"version":3,"names":["Stack","props"],"sources":["Stack.tsx"],"sourcesContent":["import React from 'react';\nimport { IStackProps, Stack as NBStack } from 'native-base';\nexport const Stack = ({ ...props }: IStackProps) => {\n  return <NBStack {...props}></NBStack>;\n};\n"],"mappings":"iKAAA,oDACA,uC,mKACO,GAAMA,MAAK,CAAG,QAARA,MAAQ,MAA+B,IAAzBC,MAAyB,wBAClD,MAAO,oBAAC,iBAAD,kBAAaA,KAAb,EAAP,CACD,CAFM,C"}

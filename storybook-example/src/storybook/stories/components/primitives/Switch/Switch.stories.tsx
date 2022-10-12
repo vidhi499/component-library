@@ -1,24 +1,24 @@
-import React from "react";
-import {
-  NativeBaseProvider,
-  Switch,
-  StorybookSwitchArgs,
-  Box,
-} from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Switch.args';
 
-const SwitchComponent = ({ ...args }) => {
+import React from 'react';
+import { Switch, HStack, Text } from 'components';
+
+const SwitchTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Switch {...args}></Switch>
+      <HStack alignItems="center" space={4}>
+        <Text>Bluetooth</Text>
+        <Switch {...args} size="sm" />
+      </HStack>
     </Wrapper>
   );
 };
 
-export const Basic = SwitchComponent.bind({});
+export const SwitchComponent = SwitchTest.bind({});
 
 export default {
-  title: "Switch",
-  component: Basic,
-  argTypes: StorybookSwitchArgs,
+  title: 'primitives/Switch',
+  component: SwitchComponent,
+  argTypes: StorybookArgs,
 };

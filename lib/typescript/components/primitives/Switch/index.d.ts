@@ -1,2 +1,3 @@
 /// <reference types="react" />
-export declare const Switch: ({ ...props }: any) => JSX.Element;
+import { ISwitchProps } from 'native-base';
+export declare const Switch: ({ ...props }: ISwitchProps) => JSX.Element;

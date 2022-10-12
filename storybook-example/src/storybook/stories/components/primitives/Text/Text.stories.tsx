@@ -1,19 +1,21 @@
-import React from "react";
-import { NativeBaseProvider, Text, StorybookTextArgs, Box } from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Text.args';
 
-const TextComponent = ({ ...args }) => {
+import React from 'react';
+import { Text } from 'components';
+
+const TextTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Text {...args}></Text>
+      <Text {...args}>This is Text.</Text>
     </Wrapper>
   );
 };
 
-export const Basic = TextComponent.bind({});
+export const TextComponent = TextTest.bind({});
 
 export default {
-  title: "Text",
-  component: Basic,
-  argTypes: StorybookTextArgs,
+  title: 'primitives/Text',
+  component: TextComponent,
+  argTypes: StorybookArgs,
 };

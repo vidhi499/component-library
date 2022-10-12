@@ -1,2 +1,3 @@
 /// <reference types="react" />
-export declare const TextArea: ({ ...props }: any) => JSX.Element;
+import { ITextAreaProps } from 'native-base';
+export declare const TextArea: ({ ...props }: ITextAreaProps) => JSX.Element;

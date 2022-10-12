@@ -1,6 +1,16 @@
-import React from "react";
-import { Button as NBButton } from "native-base";
+import React from 'react';
+import { Button as NBButton, IButtonProps } from 'native-base';
+import { ButtonGroup } from './ButtonGroup';
 
-export const Button = ({ ...props }: any) => {
+export const ButtonMain = ({ ...props }: IButtonProps) => {
   return <NBButton {...props}></NBButton>;
 };
+
+const ButtonTemp: any = ButtonMain;
+ButtonTemp.Group = ButtonGroup;
+
+// To add typings
+const Button: any = ButtonTemp;
+
+export { Button };
+export type { IButtonProps } from 'native-base';

@@ -1,28 +1,21 @@
-import React from "react";
-import {
-  NativeBaseProvider,
-  Heading,
-  StorybookHeadingArgs,
-  Box,
-  Icon,
-  StorybookIconArgs,
-  Input,
-  StorybookInputArgs,
-} from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Input.args';
 
-const InputComponent = ({ ...args }) => {
+import React from 'react';
+import { Input } from 'components';
+
+const InputTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Input {...args} w="40%" />
+      <Input {...args} mx="3" placeholder="Input" w="100%" />
     </Wrapper>
   );
 };
 
-export const Basic = InputComponent.bind({});
+export const InputComponent = InputTest.bind({});
 
 export default {
-  title: "Input",
-  component: Basic,
-  argTypes: StorybookInputArgs,
+  title: 'primitives/Input',
+  component: InputComponent,
+  argTypes: StorybookArgs,
 };

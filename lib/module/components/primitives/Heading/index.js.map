@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sources":["index.tsx"],"sourcesContent":["export { Heading } from \"native-base\";\n"],"mappings":"oKAAA"}
+{"version":3,"names":["Heading","props"],"sources":["index.tsx"],"sourcesContent":["import React from 'react';\nimport { Heading as NBHeading, IHeadingProps } from 'native-base';\nexport const Heading = ({ ...props }: IHeadingProps) => {\n  return <NBHeading {...props}></NBHeading>;\n};\n"],"mappings":"mKAAA,oDACA,uC,qKACO,GAAMA,QAAO,CAAG,QAAVA,QAAU,MAAiC,IAA3BC,MAA2B,wBACtD,MAAO,oBAAC,mBAAD,kBAAeA,KAAf,EAAP,CACD,CAFM,C"}

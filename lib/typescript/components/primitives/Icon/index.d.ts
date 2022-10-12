@@ -1,2 +1,4 @@
 /// <reference types="react" />
-export declare const Icon: ({ as, ...props }: any) => JSX.Element;
+import { IIconProps } from 'native-base';
+export declare const Icon: ({ as, ...props }: IIconProps) => JSX.Element;
+export { createIcon } from './createIcon';

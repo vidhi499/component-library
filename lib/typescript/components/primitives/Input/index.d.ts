@@ -1,2 +1,3 @@
 /// <reference types="react" />
-export declare const Input: ({ ...props }: any) => JSX.Element;
+import { IInputProps } from 'native-base';
+export declare const Input: ({ ...props }: IInputProps) => JSX.Element;

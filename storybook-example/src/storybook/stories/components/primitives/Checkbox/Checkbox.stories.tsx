@@ -1,28 +1,26 @@
-import React from "react";
-import {
-  NativeBaseProvider,
-  Heading,
-  StorybookHeadingArgs,
-  Box,
-  Icon,
-  StorybookIconArgs,
-  Checkbox,
-  StorybookCheckboxArgs,
-} from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Checkbox.args';
 
-const CheckboxComponent = ({ ...args }) => {
+import React from 'react';
+import { Checkbox } from 'components';
+
+const CheckboxTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Checkbox {...args} />
+      <Checkbox
+        {...args}
+        value="test"
+        accessibilityLabel="This is a dummy checkbox"
+        defaultIsChecked
+      />
     </Wrapper>
   );
 };
 
-export const Basic = CheckboxComponent.bind({});
+export const CheckboxComponent = CheckboxTest.bind({});
 
 export default {
-  title: "Checkbox",
-  component: Basic,
-  argTypes: StorybookCheckboxArgs,
+  title: 'primitives/Checkbox',
+  component: CheckboxComponent,
+  argTypes: StorybookArgs,
 };

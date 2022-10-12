@@ -1,2 +1,4 @@
 /// <reference types="react" />
-export declare const Checkbox: ({ ...props }: any) => JSX.Element;
+import { ICheckboxProps } from 'native-base';
+export declare const Checkbox: ({ ...props }: ICheckboxProps) => JSX.Element;
+export { CheckboxGroup } from './CheckboxGroup';

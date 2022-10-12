@@ -1,24 +1,23 @@
-import React from "react";
-import {
-  NativeBaseProvider,
-  Button,
-  StorybookButtonArgs,
-  Box,
-} from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Button.args';
+
+import React from 'react';
+import { Button } from 'components';
 
 const ButtonTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Button {...args}></Button>
+      <Button {...args} onPress={() => console.log('hello world')}>
+        Click Me
+      </Button>
     </Wrapper>
   );
 };
 
-export const Primary = ButtonTest.bind({});
+export const ButtonComponent = ButtonTest.bind({});
 
 export default {
-  title: "Button",
-  component: Primary,
-  argTypes: StorybookButtonArgs,
+  title: 'primitives/Button',
+  component: ButtonComponent,
+  argTypes: StorybookArgs,
 };

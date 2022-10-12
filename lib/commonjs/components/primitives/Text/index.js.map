@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sources":["index.tsx"],"sourcesContent":["export { Text } from \"native-base\";\n"],"mappings":"8JAAA"}
+{"version":3,"names":["Text","props"],"sources":["index.tsx"],"sourcesContent":["import React from 'react';\nimport { ITextProps, Text as NBText } from 'native-base';\nexport const Text = ({ ...props }: ITextProps) => {\n  return <NBText {...props}></NBText>;\n};\n"],"mappings":"gKAAA,oDACA,uC,kKACO,GAAMA,KAAI,CAAG,QAAPA,KAAO,MAA8B,IAAxBC,MAAwB,wBAChD,MAAO,oBAAC,gBAAD,kBAAYA,KAAZ,EAAP,CACD,CAFM,C"}

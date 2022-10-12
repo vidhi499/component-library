@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sources":["VStack.tsx"],"sourcesContent":["export { VStack } from \"native-base\";\n"],"mappings":"kKAAA"}
+{"version":3,"names":["VStack","props"],"sources":["VStack.tsx"],"sourcesContent":["import React from 'react';\nimport { IStackProps, VStack as NBVStack } from 'native-base';\nexport const VStack = ({ ...props }: IStackProps) => {\n  return <NBVStack {...props}></NBVStack>;\n};\n"],"mappings":"kKAAA,oDACA,uC,oKACO,GAAMA,OAAM,CAAG,QAATA,OAAS,MAA+B,IAAzBC,MAAyB,wBACnD,MAAO,oBAAC,kBAAD,kBAAcA,KAAd,EAAP,CACD,CAFM,C"}

@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sources":["index.tsx"],"sourcesContent":["import { Box } from \"native-base\";\n\nexport { Box };\n"],"mappings":"4JAAA"}
+{"version":3,"names":["Box","props"],"sources":["index.tsx"],"sourcesContent":["import React from 'react';\nimport { Box as NBBox, IBoxProps } from 'native-base';\n\nexport const Box = ({ ...props }: IBoxProps) => {\n  return <NBBox {...props}></NBBox>;\n};\n"],"mappings":"+JAAA,oDACA,uC,iKAEO,GAAMA,IAAG,CAAG,QAANA,IAAM,MAA6B,IAAvBC,MAAuB,wBAC9C,MAAO,oBAAC,eAAD,kBAAWA,KAAX,EAAP,CACD,CAFM,C"}

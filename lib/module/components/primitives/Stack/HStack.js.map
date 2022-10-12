@@ -1,1 +1,1 @@
-{"version":3,"names":[],"sources":["HStack.tsx"],"sourcesContent":["export { HStack } from \"native-base\";\n"],"mappings":"kKAAA"}
+{"version":3,"names":["HStack","props"],"sources":["HStack.tsx"],"sourcesContent":["import React from 'react';\nimport { IStackProps, HStack as NBHStack } from 'native-base';\nexport const HStack = ({ ...props }: IStackProps) => {\n  return <NBHStack {...props}></NBHStack>;\n};\n"],"mappings":"kKAAA,oDACA,uC,oKACO,GAAMA,OAAM,CAAG,QAATA,OAAS,MAA+B,IAAzBC,MAAyB,wBACnD,MAAO,oBAAC,kBAAD,kBAAcA,KAAd,EAAP,CACD,CAFM,C"}

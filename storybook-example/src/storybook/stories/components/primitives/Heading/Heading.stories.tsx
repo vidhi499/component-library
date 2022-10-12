@@ -1,25 +1,21 @@
-import React from "react";
-// import { NativeBaseProvider, Heading, Box } from "native-base";
-import {
-  StorybookHeadingArgs,
-  NativeBaseProvider,
-  Heading,
-  Box,
-} from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Heading.args';
 
-const HeadingComponent = ({ ...args }) => {
+import React from 'react';
+import { Heading } from 'components';
+
+const HeadingTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Heading {...args}></Heading>
+      <Heading {...args}>I'm a Heading</Heading>
     </Wrapper>
   );
 };
 
-export const Basic = HeadingComponent.bind({});
+export const HeadingComponent = HeadingTest.bind({});
 
 export default {
-  title: "Heading",
-  component: Basic,
-  argTypes: StorybookHeadingArgs,
+  title: 'primitives/Heading',
+  component: HeadingComponent,
+  argTypes: StorybookArgs,
 };

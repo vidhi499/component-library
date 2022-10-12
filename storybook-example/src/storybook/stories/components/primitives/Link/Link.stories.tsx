@@ -1,19 +1,23 @@
-import React from "react";
-import { NativeBaseProvider, Link, StorybookLinkArgs, Box } from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './Link.args';
 
-const LinkComponent = ({ ...args }) => {
+import React from 'react';
+import { Link, Box } from 'components';
+
+const LinkTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Link {...args}></Link>
+      <Link {...args} href="https://nativebase.io">
+        Click here to open documentation.
+      </Link>
     </Wrapper>
   );
 };
 
-export const Basic = LinkComponent.bind({});
+export const LinkComponent = LinkTest.bind({});
 
 export default {
-  title: "Link",
-  component: Basic,
-  argTypes: StorybookLinkArgs,
+  title: 'primitives/Link',
+  component: LinkComponent,
+  argTypes: StorybookArgs,
 };

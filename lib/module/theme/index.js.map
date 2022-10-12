@@ -1,1 +1,1 @@
-{"version":3,"names":["myTheme","extendTheme"],"sources":["index.tsx"],"sourcesContent":["import { extendTheme } from \"native-base\";\n\nexport const myTheme = extendTheme({});\n"],"mappings":"gFAAA,uCAEO,GAAMA,QAAO,CAAG,GAAAC,uBAAA,EAAY,EAAZ,CAAhB,C"}
+{"version":3,"names":["theme","colors","components"],"sources":["index.ts"],"sourcesContent":["export const theme = {\n  colors: {},\n  components: {},\n};\n"],"mappings":"8EAAO,GAAMA,MAAK,CAAG,CACnBC,MAAM,CAAE,EADW,CAEnBC,UAAU,CAAE,EAFO,CAAd,C"}

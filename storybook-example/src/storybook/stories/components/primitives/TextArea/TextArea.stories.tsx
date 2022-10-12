@@ -1,28 +1,27 @@
-import React from "react";
-import {
-  NativeBaseProvider,
-  Heading,
-  StorybookHeadingArgs,
-  Box,
-  Icon,
-  StorybookIconArgs,
-  TextArea,
-  StorybookTextAreaArgs,
-} from "my-com-lib";
-import { Wrapper } from "../../Wrapper";
+import { Wrapper } from '../../Wrapper';
+import { StorybookArgs } from './TextArea.args';
 
-const TextAreaComponent = ({ ...args }) => {
+import React from 'react';
+import { TextArea } from 'components';
+
+const TextAreaTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <TextArea {...args} w="40%" />
+      <TextArea
+        {...args}
+        h={20}
+        placeholder="Text Area Placeholder"
+        w="75%"
+        maxW="300"
+      />
     </Wrapper>
   );
 };
 
-export const Basic = TextAreaComponent.bind({});
+export const TextAreaComponent = TextAreaTest.bind({});
 
 export default {
-  title: "TextArea",
-  component: Basic,
-  argTypes: StorybookTextAreaArgs,
+  title: 'primitives/TextArea',
+  component: TextAreaComponent,
+  argTypes: StorybookArgs,
 };
