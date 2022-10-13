@@ -7,7 +7,7 @@ import { Badge } from 'components';
 const BadgeTest = ({ ...args }) => {
   return (
     <Wrapper>
-      <Badge>NEW FEATURE</Badge>
+      <Badge {...args}>NEW FEATURE</Badge>
     </Wrapper>
   );
 };
