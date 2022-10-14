@@ -14,9 +14,20 @@ import {
 } from 'components';
 
 const AlertTest = ({ ...args }) => {
+  const getTextColor = (variant: any) => {
+    switch (variant) {
+      case 'left-accent':
+      case 'top-accent':
+      case 'subtle':
+        return 'coolGray.800';
+
+      case 'solid':
+        return 'warmGray.50';
+    }
+  };
   return (
     <Wrapper>
-      <Alert maxW="400" colorScheme="info">
+      <Alert {...args} maxW="400">
         <VStack space={1} flexShrink={1} w="100%">
           <HStack
             flexShrink={1}
@@ -26,7 +37,11 @@ const AlertTest = ({ ...args }) => {
           >
             <HStack space={2} flexShrink={1} alignItems="center">
               <Alert.Icon />
-              <Heading fontSize="md" fontWeight="medium" color="coolGray.800">
+              <Heading
+                fontSize="md"
+                fontWeight="medium"
+                color={getTextColor(args.variant)}
+              >
                 We are going live in July!
               </Heading>
             </HStack>
@@ -34,10 +49,11 @@ const AlertTest = ({ ...args }) => {
               variant="unstyled"
               _focus={{ borderWidth: 0 }}
               icon={<CloseIcon size="3" />}
-              _icon={{ color: 'coolGray.600' }}
+              // @ts-ignore
+              _icon={{ color: getTextColor(args.variant) }}
             />
           </HStack>
-          <Box pl="6" _text={{ color: 'coolGray.600' }}>
+          <Box pl="6" _text={{ color: getTextColor(args.variant) }}>
             We are happy to announce that we are going live on July 28th. Get
             ready!
           </Box>
